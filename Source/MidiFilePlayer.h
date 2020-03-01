@@ -5,8 +5,7 @@
   this agreement is available at http://www.cliki.net/LLGPL             
  *=======================================================================*/
 
-#ifndef CM_MIDIFILEPLAYER_H
-#define CM_MIDIFILEPLAYER_H
+#pragma once
 
 #include "Libraries.h"
 #include "Transport.h"
@@ -44,9 +43,3 @@ public:
   void closeButtonPressed();
   static void openMidiFilePlayer(juce::File midiFile = juce::File(), bool play = false);
 };
-
-#endif
-
-
-
-

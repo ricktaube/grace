@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_MAIN_H
-#define CM_MAIN_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -73,5 +72,3 @@ public:
   int getNumUnsavedWindows();
   bool queryUnsavedWindows();
 };
-
-#endif

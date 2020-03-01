@@ -1,7 +1,6 @@
 /* (Auto-generated binary data file). */
 
-#ifndef CM_FONTS_H
-#define CM_FONTS_H
+#pragma once
 
 namespace Fonts
 {
@@ -22,7 +21,4 @@ namespace Fonts
 
     extern const char*  vera_typeface;
     const int           vera_typefaceSize = 32896;
-
 };
-
-#endif

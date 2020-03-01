@@ -1,12 +1,18 @@
-/*=======================================================================*
-  Copyright (C) 2012 Rick Taube.                                        
-  This program is free software; you can redistribute it and/or modify  
-  it under the terms of the Lisp Lesser Gnu Public License. The text of 
-  this agreement is available at http://www.cliki.net/LLGPL             
- *=======================================================================*/
+/*
+  ==============================================================================
 
-#ifndef CM_SYNTAX_H
-#define CM_SYNTAX_H
+  Copyright 1999-2013 Rick Taube.  All rights reserved.
+
+  Licensed under the "Attribution-NonCommercial-ShareAlike" Vizsage
+  Public License, which says that non-commercial users may share and
+  modify this code but must give credit and share improvements. For
+  complete terms please read the text of the full license available at
+  this link: http://vizsage.com/license/Vizsage-License-BY-NC-SA.html
+
+  ==============================================================================
+*/
+
+#pragma once
 
 #include "Libraries.h"
 #include "Enumerations.h"
@@ -199,5 +205,3 @@ public:
 
   juce_DeclareSingleton (Sal2Syntax, true)
 };
-
-#endif

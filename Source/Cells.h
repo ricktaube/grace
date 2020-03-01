@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_CELLS_H
-#define CM_CELLS_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -86,6 +85,3 @@ public:
   static void openWindowFromXml(void* xml);
   CellView* getCellView();
 };
-
-#endif
-

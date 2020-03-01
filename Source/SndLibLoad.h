@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_SNDLIB_H
-#define CM_SNDLIB_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -49,6 +48,3 @@ public:
   void restoreInstrument(juce::XmlElement* ins);
   juce_DeclareSingleton (SndLib, true)
 };
-
-#endif
-

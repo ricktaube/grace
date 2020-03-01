@@ -568,12 +568,10 @@ bool XOscNode::applyNode(SchemeThread* st, double curtime)
       continue;
     tail = s7_cdr(tail);
   }
-  // build callback
-  int loc;
   s7_pointer args, res;
   // set hook's args to (("path" . data))
   args = s7_cons(sc, data, snil);
-  loc = s7_gc_protect(sc, args);
+  auto loc = s7_gc_protect(sc, args);
   // call the hook function
   res = s7_call(sc, hook->proc, args);
   s7_gc_unprotect_at(sc, loc);

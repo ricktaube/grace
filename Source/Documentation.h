@@ -1,7 +1,6 @@
 /* (Auto-generated binary data file). */
 
-#ifndef BINARY_DOCUMENTATION_H
-#define BINARY_DOCUMENTATION_H
+#pragma once
 
 namespace Documentation
 {
@@ -102,5 +101,3 @@ namespace Documentation
     const int           reich_salSize = 810;
 
 };
-
-#endif

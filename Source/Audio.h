@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_AUDIO_H
-#define CM_AUDIO_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -51,5 +50,3 @@ public:
   void openAudioFilePlayer(juce::File fileToOpen = juce::File(), bool play = false);
   juce_DeclareSingleton (AudioManager, true)
 };
-
-#endif

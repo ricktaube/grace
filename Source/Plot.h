@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_PLOT_H
-#define CM_PLOT_H
+#pragma once
 
 #include "Libraries.h"
 #include "MidiPlaybackThread.h"
@@ -1084,8 +1083,4 @@ public:
       thread. **/
   void addMidiPlaybackMessages(MidiPlaybackThread::MidiMessageQueue& queue, MidiPlaybackThread::PlaybackPosition& position);
   void handleMessage(juce::MidiMessage& midiMessage);
-
 };
-
-#endif
-

@@ -7,8 +7,7 @@
  *
  */
 
-#ifndef CM_METRONOME_H
-#define CM_METRONOME_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -81,4 +80,3 @@ struct Metronome
   Metronome(double tempo);
   Metronome();
 };
-#endif

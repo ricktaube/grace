@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_CONSOLE_H
-#define CM_CONSOLE_H
+#pragma once
 
 #include "Libraries.h"
 #include "Messages.h"
@@ -110,6 +109,3 @@ public:
   juce::TextEditor* getTextBuffer();
   Console* getConsole();
 };
-
-#endif
-

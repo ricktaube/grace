@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_MIDI_H
-#define CM_MIDI_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -293,5 +292,3 @@ public:
   void handlePartialSysexMessage (juce::MidiInput *dev, const juce::uint8 *data, int num, double time);
   juce_DeclareSingleton (MidiInPort, true)
 };
-
-#endif

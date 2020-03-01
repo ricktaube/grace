@@ -5,8 +5,7 @@
   this agreement is available at http://www.cliki.net/LLGPL             
  *=======================================================================*/
 
-#ifndef CM_AUDIOFILEPLAYER_H
-#define CM_AUDIOFILEPLAYER_H
+#pragma once
 
 #include "Libraries.h"
 #include "Transport.h"
@@ -53,6 +52,3 @@ public:
   void closeButtonPressed();
   static void openAudioFilePlayer(juce::File fileToOpen, bool play);
 };
-
-#endif
-

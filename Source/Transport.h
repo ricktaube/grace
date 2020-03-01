@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_TRANSPORT_H
-#define CM_TRANSPORT_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -569,5 +568,3 @@ public:
     return t;
   }
 };
-
-#endif

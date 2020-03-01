@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_PLOTWINDOW_H
-#define CM_PLOTWINDOW_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -113,10 +112,4 @@ struct PlottingControlsWindow : public juce::DocumentWindow
     }
     return 0;
   }
-
-  
 };
-
-
-#endif
-

@@ -5,8 +5,7 @@
 | this agreement is available at http://www.gnu.org/copyleft/gpl.html  |
 \*--------------------------------------------------------------------*/
 
-#ifndef Skin_h
-#define Skin_h
+#pragma once
 
 #include "Libraries.h"
 #include "Enumerations.h"
@@ -440,4 +439,3 @@ public:
   }
   */
 };
-#endif

@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_MIDI_PLAYBACK_THREAD_H
-#define CM_MIDI_PLAYBACK_THREAD_H
+#pragma once
 
 #include "Libraries.h"
 #include "Transport.h"
@@ -606,5 +605,3 @@ private:
   }
   
 };
-
-#endif

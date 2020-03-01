@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_CODEEDITOR_H
-#define CM_CODEEDITOR_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -228,7 +227,4 @@ public:
   static void newFile(juce::String title=juce::String(), int synt=TextIDs::Empty, juce::String content=juce::String());
   static CodeEditorWindow* getFocusCodeEditor();
   static void openFindAndReplaceDialog();
-
 };
-
-#endif

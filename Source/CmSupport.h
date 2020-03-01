@@ -5,8 +5,7 @@
   this agreement is available at http://www.cliki.net/LLGPL             
  *=======================================================================*/
 
-#ifndef CM_CMSUPPORT_H
-#define CM_CMSUPPORT_H
+#pragma once
 
 #include "Scheme.h"
 
@@ -225,5 +224,3 @@ s7_pointer osc_is_hook(char* oscpath);
 // SDIF
 
 s7_pointer sdif_import(char* file,  s7_pointer args);
-#endif
-

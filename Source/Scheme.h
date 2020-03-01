@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_SCHEME_H
-#define CM_SCHEME_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -321,5 +320,3 @@ public:
   
   juce_DeclareSingleton (SchemeThread, true)
 };
-
-#endif

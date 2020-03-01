@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_PREFERENCES_H
-#define CM_PREFERENCES_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -54,5 +53,3 @@ public:
   juce::XmlElement* getColorTheme(const juce::String name);
   juce_DeclareSingleton (Preferences, false);
 };
-
-#endif

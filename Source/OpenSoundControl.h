@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_OPENSOUNDCONTROL_H
-#define CM_OPENSOUNDCONTROL_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -122,5 +121,3 @@ public:
 
   juce_DeclareSingleton(OpenSoundControl, true)
 };
-
-#endif

@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_ENUMERATIONS_H
-#define CM_ENUMERATIONS_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -1303,5 +1302,3 @@ public:
   static const bool isSalBlockOpen(int t) {return SalTypeDataBits(t)==SalBlockOpen;}
   static const bool isSalBlockClose(int t) {return SalTypeDataBits(t)==SalBlockClose;}
 };
-
-#endif

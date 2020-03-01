@@ -5,8 +5,7 @@
   this agreement is available at http://www.cliki.net/LLGPL             
  *=======================================================================*/
 
-#ifndef CM_MESSAGES_H
-#define CM_MESSAGES_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -42,5 +41,3 @@ public:
   }
   ~AsyncMessage() {}
 };
-
-#endif

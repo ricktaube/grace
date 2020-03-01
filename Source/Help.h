@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_HELP_H
-#define CM_HELP_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -52,5 +51,3 @@ public:
                         int exportId);
   juce_DeclareSingleton (Help, true)
 };
-
-#endif

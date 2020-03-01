@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_CSOUND_H
-#define CM_CSOUND_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -169,5 +168,3 @@ public:
   void comboBoxChanged (juce::ComboBox* comboBoxThatHasChanged) ;
   void buttonClicked (juce::Button* buttonThatWasClicked) ;
 };
-
-#endif

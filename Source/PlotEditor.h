@@ -12,8 +12,7 @@
   ==============================================================================
 */
 
-#ifndef CM_PLOTEDITOR_H
-#define CM_PLOTEDITOR_H
+#pragma once
 
 #include "Libraries.h"
 
@@ -525,6 +524,3 @@ public:
 
   void currentTabChanged (int newCurrentTabIndex, const juce::String &newCurrentTabName);
 };
-
-#endif
-
