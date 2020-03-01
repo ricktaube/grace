@@ -33,6 +33,7 @@ $ premake4 --with-g++
 If you are successful the result of this process will be a static sndlib library saved in the
 sndlib/lib folder,  e.g. sndlib/lib/libsndlib.a.
 
+
 3. Cd into the grace/Builds directory and use one of the premade projects to build
 Grace.app.  Projects for Xcode, VisualStudio2019 and Linux are already provided. To 
 add a different build or customize an existing one, open Grace.projucer in JUCE's 
