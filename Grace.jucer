@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" jucerVersion="5.4.5"
+              version="3.10.3" headerPath="../../sndlib" defines="HAVE_SCHEME=1">
+  <MAINGROUP id="uY8Jva" name="Grace">
+    <GROUP id="{821C7801-B231-6F50-D189-87D7073B543D}" name="Icons">
+      <FILE id="GlOMaa" name="Grace.icns" compile="0" resource="1" file="Resources/Icons/Grace.icns"
+            xcodeResource="1"/>
+      <FILE id="EfL8io" name="Grace.ico" compile="0" resource="1" file="Resources/Icons/Grace.ico"
+            xcodeResource="0"/>
+    </GROUP>
+    <GROUP id="{BEA1698D-B00C-8831-1932-6F67B5C7CD22}" name="Source">
+      <FILE id="TutcLW" name="AppConfig.h" compile="0" resource="0" file="Source/AppConfig.h"/>
+      <FILE id="Bfo4or" name="Audio.cpp" compile="1" resource="0" file="Source/Audio.cpp"/>
+      <FILE id="diR103" name="Audio.h" compile="0" resource="0" file="Source/Audio.h"/>
+      <FILE id="Spe6GG" name="AudioFilePlayer.cpp" compile="1" resource="0"
+            file="Source/AudioFilePlayer.cpp"/>
+      <FILE id="zjdqSD" name="AudioFilePlayer.h" compile="0" resource="0"
+            file="Source/AudioFilePlayer.h"/>
+      <FILE id="yhV9XH" name="Cells.cpp" compile="1" resource="0" file="Source/Cells.cpp"/>
+      <FILE id="fzQ2Gq" name="Cells.h" compile="0" resource="0" file="Source/Cells.h"/>
+      <FILE id="xIyNvt" name="CmSupport.cpp" compile="1" resource="0" file="Source/CmSupport.cpp"/>
+      <FILE id="LKM3mU" name="CmSupport.h" compile="0" resource="0" file="Source/CmSupport.h"/>
+      <FILE id="DzzKN0" name="CodeEditor.cpp" compile="1" resource="0" file="Source/CodeEditor.cpp"/>
+      <FILE id="gc3yQq" name="CodeEditor.h" compile="0" resource="0" file="Source/CodeEditor.h"/>
+      <FILE id="GBjn2R" name="Commands.cpp" compile="1" resource="0" file="Source/Commands.cpp"/>
+      <FILE id="cpKZNv" name="Console.cpp" compile="1" resource="0" file="Source/Console.cpp"/>
+      <FILE id="LMIgey" name="Console.h" compile="0" resource="0" file="Source/Console.h"/>
+      <FILE id="zWJO1w" name="Csound.cpp" compile="1" resource="0" file="Source/Csound.cpp"/>
+      <FILE id="zWcUcY" name="Csound.h" compile="0" resource="0" file="Source/Csound.h"/>
+      <FILE id="YgHnju" name="Documentation.cpp" compile="1" resource="0"
+            file="Source/Documentation.cpp"/>
+      <FILE id="qaNrM6" name="Documentation.h" compile="0" resource="0" file="Source/Documentation.h"/>
+      <FILE id="LkLz3r" name="Enumerations.h" compile="0" resource="0" file="Source/Enumerations.h"/>
+      <FILE id="dhQSwU" name="Fonts.cpp" compile="1" resource="0" file="Source/Fonts.cpp"/>
+      <FILE id="vQO29a" name="Fonts.h" compile="0" resource="0" file="Source/Fonts.h"/>
+      <FILE id="PQDuqV" name="Help.cpp" compile="1" resource="0" file="Source/Help.cpp"/>
+      <FILE id="Kwo5W4" name="Help.h" compile="0" resource="0" file="Source/Help.h"/>
+      <FILE id="XVSy23" name="Instruments.cpp" compile="1" resource="0" file="Source/Instruments.cpp"/>
+      <FILE id="PCKBum" name="Instruments.h" compile="0" resource="0" file="Source/Instruments.h"/>
+      <FILE id="UP2heh" name="Libraries.h" compile="0" resource="0" file="Source/Libraries.h"/>
+      <FILE id="MCXyNW" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="ZWjStU" name="Main.h" compile="0" resource="0" file="Source/Main.h"/>
+      <FILE id="c8WKD7" name="Messages.h" compile="0" resource="0" file="Source/Messages.h"/>
+      <FILE id="EsuBeG" name="Metronome.cpp" compile="1" resource="0" file="Source/Metronome.cpp"/>
+      <FILE id="uLoh5x" name="Metronome.h" compile="0" resource="0" file="Source/Metronome.h"/>
+      <FILE id="PKk6MX" name="Midi.cpp" compile="1" resource="0" file="Source/Midi.cpp"/>
+      <FILE id="BBHQdf" name="Midi.h" compile="0" resource="0" file="Source/Midi.h"/>
+      <FILE id="ipjYdV" name="MidiFilePlayer.cpp" compile="1" resource="0"
+            file="Source/MidiFilePlayer.cpp"/>
+      <FILE id="tLbZEq" name="MidiFilePlayer.h" compile="0" resource="0"
+            file="Source/MidiFilePlayer.h"/>
+      <FILE id="QZkYwV" name="MidiPlaybackThread.h" compile="0" resource="0"
+            file="Source/MidiPlaybackThread.h"/>
+      <FILE id="iDHtiI" name="OpenSoundControl.cpp" compile="1" resource="0"
+            file="Source/OpenSoundControl.cpp"/>
+      <FILE id="WFcYSV" name="OpenSoundControl.h" compile="0" resource="0"
+            file="Source/OpenSoundControl.h"/>
+      <FILE id="JGx8mY" name="Plot.cpp" compile="1" resource="0" file="Source/Plot.cpp"/>
+      <FILE id="v2rOn8" name="Plot.h" compile="0" resource="0" file="Source/Plot.h"/>
+      <FILE id="STavXt" name="PlotEditor.cpp" compile="1" resource="0" file="Source/PlotEditor.cpp"/>
+      <FILE id="CxwVNY" name="PlotEditor.h" compile="0" resource="0" file="Source/PlotEditor.h"/>
+      <FILE id="ojEmED" name="PlotWindow.cpp" compile="1" resource="0" file="Source/PlotWindow.cpp"/>
+      <FILE id="DgEvqx" name="PlotWindow.h" compile="0" resource="0" file="Source/PlotWindow.h"/>
+      <FILE id="AWmhiG" name="Preferences.cpp" compile="1" resource="0" file="Source/Preferences.cpp"/>
+      <FILE id="uA0Tfg" name="Preferences.h" compile="0" resource="0" file="Source/Preferences.h"/>
+      <FILE id="HaacV0" name="Resources.cpp" compile="1" resource="0" file="Source/Resources.cpp"/>
+      <FILE id="Xvqc24" name="Resources.h" compile="0" resource="0" file="Source/Resources.h"/>
+      <FILE id="AIxTdt" name="Scheme.cpp" compile="1" resource="0" file="Source/Scheme.cpp"/>
+      <FILE id="R2iQ2A" name="Scheme.h" compile="0" resource="0" file="Source/Scheme.h"/>
+      <FILE id="l1zjgE" name="SchemeSources.cpp" compile="1" resource="0"
+            file="Source/SchemeSources.cpp"/>
+      <FILE id="uNwTRZ" name="SchemeSources.h" compile="0" resource="0" file="Source/SchemeSources.h"/>
+      <FILE id="wN5tcG" name="Skin.h" compile="0" resource="0" file="Source/Skin.h"/>
+      <FILE id="RRtTSu" name="SndLib.cpp" compile="1" resource="0" file="Source/SndLib.cpp"/>
+      <FILE id="mi2VKP" name="SndLib.h" compile="0" resource="0" file="Source/SndLib.h"/>
+      <FILE id="hHpqL0" name="SndLibBridge.cpp" compile="1" resource="0"
+            file="Source/SndLibBridge.cpp"/>
+      <FILE id="ULxkX1" name="SndLibBridge.h" compile="0" resource="0" file="Source/SndLibBridge.h"/>
+      <FILE id="ZoGfTa" name="Syntax.cpp" compile="1" resource="0" file="Source/Syntax.cpp"/>
+      <FILE id="wWXhJG" name="Syntax.h" compile="0" resource="0" file="Source/Syntax.h"/>
+      <FILE id="duxkr1" name="Transport.h" compile="0" resource="0" file="Source/Transport.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" externalLibraries="sndlib" extraLinkerFlags="-L../../sndlib/lib&#10;"
+               customPList="&lt;plist&gt;&#10;&lt;dict&gt;&#10;&#9;&lt;key&gt;CFBundleDocumentTypes&lt;/key&gt;&#10;&#9;&lt;array&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;scm&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;lisp&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;ins&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;clm&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Lisp source file&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;TEXT&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;utxt&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;sal&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;SAL source file&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;TEXT&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;utxt&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&lt;/array&gt;&#10;&#9;&lt;key&gt;CFBundleIconFile&lt;/key&gt;&#10;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
+               bundleIdentifier="com.commonmusic.grace">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../juce/modules"/>
+        <MODULEPATH id="juce_core" path="../juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../juce/modules"/>
+        <MODULEPATH id="juce_events" path="../juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../juce/modules"/>
+        <MODULEPATH id="juce_osc" path="../juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_PLUGINHOST_AU="1" JUCE_USE_MP3AUDIOFORMAT="1"/>
+</JUCERPROJECT>

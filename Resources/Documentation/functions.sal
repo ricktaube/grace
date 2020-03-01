@@ -1,0 +1,105 @@
+;
+;; Defining Functions
+;
+
+; To run examples put the cursor at the end of each expression and
+; press Command-Return. Look in the console window for any output.
+
+; Use the 'function' command to create a new function. The command
+; requires three pieces of information: (1) the name of the new
+; function, (2) the input parameters the function accepts and (3) the
+; 'body' of the function, the statements the function execute when it
+; is called. The value of the last statement in the body will be
+; returned as the value of the function. Here is an example of a
+; function definition. The function's name is 'pentatonic', it
+; declares one input parameter 'k' (which should be a key number) and
+; it executes a single statement in its body (a call to the transpose
+; function to compute the pentatonic scale it returns).
+
+function pentatonic (k)
+  transpose({0 2 4 7 9}, k)
+end
+
+; After defining the function you can call it with various key numbers
+; as input
+
+pentatonic(60)
+
+pentatonic(between(60, 72))
+
+;
+;; Predicate functions and conditional statements
+;
+
+; A 'predicate' is a function that returns true or false based on a
+; test of its argument(s). Preicates often use what are called
+; 'conditional statements' to accomplish their tasks.  The 'if then
+; else' statement is the most flexble conditional: it consists of
+; three parts: a test is first evaluated, if the test is true (not #f)
+; then a 'then' statement is executed, otherwise an optional 'else'
+; statement is executed. Here is the definition of a predicate
+; function that returns true if its input key number is a black key,
+; otherwise it returns false. Notice that the 'true' value that the
+; function returns is the pitch class of the black key rather than
+; boolean true. Since boolean logic says that any value that is not #f
+; must, by definition, be true, the true value can be anything that is
+; not stricly #f.  This allows our function to return useful
+; information (the pitch class) when the key in question is actually a
+; black key:
+
+function black-key? (knum)
+  with p = pitch-class(knum)
+  if (member(p, {1 3 6 8 10}))
+    p
+  else
+    #f
+  end
+end
+
+begin
+  with k = random(128)
+  print( "key: ", k, " is black: ", black-key?(k))
+end
+
+;
+;; &optkey parameters
+;
+
+; The &optkey parameter designator declares that the parameters listed
+; after it are optional, keyword parameters.  Optional parameters have
+; default values so they only need to be specified in the function
+; call if they are different than the default. If you dont explicity
+; declare a default value when you define the parameter, its value
+; will be initilaize to #f. &optkey parameters also have keyword names
+; so they can be specified by name as well as by position. This next
+; example defines all of its parameters to be &optkey and the exampl
+; function calls following it demonstrate the flexibility that &optkey
+; parameters allow in function calls
+
+function triad (&optkey root = 0, 3rd = 4, 5th = 7, inv = 0)
+  if (inv = 0) list(root, root + 3rd, 5th)
+  else
+    if (inv = 1) list(3rd, 5th, root + 12)
+    else
+      if (inv = 2) list(5th, root + 12, 3rd + 12)
+      else #f
+      end
+    end
+  end
+end
+
+; No inputs will return the default triad
+
+triad()
+
+; Diminished triad
+
+triad(0, 3, 6)
+
+; The default triad in 1st inversion
+
+triad(inv: 1)
+
+; Second inversion minor triad
+
+triad(inv: 2, 3rd: 3)

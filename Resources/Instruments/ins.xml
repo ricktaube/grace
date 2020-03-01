@@ -1,0 +1,87 @@
+<instrument_table_data>
+
+  <columns>
+    <column Id="1" Name="Name"/>
+    <column Id="2" Name="File"/>
+    <column Id="3" Name="Category"/>
+    <column Id="4" Name="Comment"/>
+    <!-- stubbed out for now --> <column Id="5" Name="AutoLoad"/>
+  </columns>
+
+  <!-- Frequency Modulation -->
+
+  <instruments>
+    <instrument Name="animal" File="animals.scm" Category="Waveshaping" Comment="a bunch of animals" Examples="animals.clm" Depend="env.scm generators.scm" AutoLoad="no" />
+    <instrument Name="anoi" File="anoi.scm" Category="Filtering" Comment="noise reduction" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="bigbird" File="bird.scm" Category="Waveshaping" Comment="waveshaping using polynomial unit generator" Examples="bird.clm" Depend="" AutoLoad="no" />
+    <instrument Name="bird" File="bird.scm" Category="Waveshaping" Comment="sine wave instrument" Examples="bird.clm" Depend="" AutoLoad="no" />
+    <instrument Name="bow" File="strad.scm" Category="Physical Modeling" Comment="Juan Reyes bowed string physical model" Examples="strad.clm" Depend="" AutoLoad="no" />
+    <instrument Name="canter" File="bagpipes.scm" Category="Frequency Modulation" Comment="canter portion of Peter Commons' bagpipe (bag.clm)" Examples="bagpipes.clm" Depend="" AutoLoad="no" />
+    <instrument Name="cellon" File="cellon.scm" Category="Frequency Modulation" Comment="feedback fm (Stanislaw Krupowiecz)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="cnvrev" File="cnvrev.scm" Category="Sound Processing" Comment="Convolution of file with impulse" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="cross-fade" File="fade.scm" Category="Sound Processing" Comment="cross fade in the frequency domain" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="cut-samples" File="samples.scm" Category="Sound Processing" Comment="cut samples from file, see parse-samples" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="dlocsig" File="delocsig.scm" Category="Sound Processing" Comment="quad sound movement (Fernando Lopez-Lezcano)" Examples="" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="dissolve-fade" File="fade.scm" Category="Sound Processing" Comment="dissolving fade in the frequency domain" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="drone" File="bagpipes.scm" Category="Waveshaping" Comment="Peter Commons' bagpipe drone (bag.clm)" Examples="bagpipes.clm" Depend="" AutoLoad="no" />
+    <instrument Name="env" File="env.scm" Category="Support" Comment="various envelope generators" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="expandn" File="expandn.scm" Category="Granular Synthesis" Comment="granular synthesis (Michael Klingbeil)" Examples="expandn.clm" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="expfil" File="expfil.scm" Category="Granular Synthesis" Comment="granulate two files interleaved" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="expsnd" File="expsnd.scm" Category="Granular Synthesis" Comment="granulate with envelopes on various fields" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="expsrc" File="expsrc.scm" Category="Granular Synthesis" Comment="granulate and src to mimic phase vocoder tricks" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="fm-bell" File="fm-bell.scm" Category="Frequency Modulation" Comment="fm bell (Michael McNabb)" Examples="fm-bell.clm" Depend="" AutoLoad="no" />
+    <instrument Name="fm-drum" File="fm-drum.scm" Category="Frequency Modulation" Comment="cascade FM drum (Jan Mattox)" Examples="fm-drum.clm" Depend="" AutoLoad="no" />
+    <instrument Name="fm-insect" File="fm-insect.scm" Category="Frequency Modulation" Comment="FM for insect simulations" Examples="fm-insect.clm" Depend="" AutoLoad="no" />
+    <instrument Name="fm-noise" File="fm-noise.scm" Category="Frequency Modulation" Comment="FM for ocean wave simulations" Examples="" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="fm-trumpet" File="fm-trumpet.scm" Category="Frequency Modulation" Comment="Dexter Morrill's FM trumpet" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="fm-violin" File="v.scm" Category="Frequency Modulation" Comment="fm violin (William Schottstaedt)" Examples="v.clm" Depend="" AutoLoad="no" />
+    <instrument Name="fm-voice" File="jcvoi.scm" Category="Frequency Modulation" Comment="John Chowning's fm voice" Examples="jcvoi.clm" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="fm" File="fm.scm" Category="Frequency Modulation" Comment="simple fm with envelope controls" Examples="fm.clm" Depend="" AutoLoad="no" />
+    <instrument Name="fofins" File="fofins.scm" Category="Waveshaping" Comment="formant synthesis" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="freeverb" File="freeverb.scm" Category="Sound Processing" Comment="reverberation" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="fullmix" File="fullmix.scm" Category="Sound Processing" Comment="mixer" Examples="fullmix.clm" Depend="" AutoLoad="no" />
+    <instrument Name="generator" File="generators.scm" Category="Support" Comment="various generators" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="gong" File="gong.scm" Category="Frequency Modulation" Comment="Paul Weineke's FM gong" Examples="gong.clm" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="gran-synth" File="gran-synth.scm" Category="Granular Synthesis" Comment="grains using wave-train gen" Examples="gran-synth.clm" Depend="" AutoLoad="no" />
+    <instrument Name="grani" File="grani.scm" Category="Granular Synthesis" Comment="granular synthesis (Fernando Lopez-Lezcano)" Examples="" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="grapheq" File="grapheq.scm" Category="Filtering" Comment="graphic equalizer (Marco Trevisani)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="hammondoid" File="hammondoid.scm" Category="Waveshaping" Comment="Perry Cook's Hammond organ (sort of)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="jc-reverb" File="jcrev.scm" Category="Reverberation" Comment="John Chowning's ancient reverb" Examples="jcrev.clm" Depend="" AutoLoad="no" />
+    <instrument Name="jl-reverb" File="jlrev.scm" Category="Reverberation" Comment="a more cavernous version of the same" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="lbj-piano" File="lbj-piano.scm" Category="Waveshaping" Comment="Doug Fulton's piano simulation using spectra of J.A.Moorer" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="maraca" File="maraca.scm" Category="Physical Modeling" Comment="maraca (Perry Cook)" Examples="maraca.clm" Depend="" AutoLoad="no" />
+    <instrument Name="maxfilter" File="maxf.scm" Category="Filtering" Comment="Juan Reyes modal synthesis" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="metal" File="metal.scm" Category="Frequency Modulation" Comment="Perry Cook's heavy metal instrument" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="noise" File="noise.scm" Category="Frequency Modulation" Comment="Michael Scholz's FM noise instrument" Examples="" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="nrev" File="nrev.scm" Category="Reverberation" Comment="Michael McNabb's reverb" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="p" File="piano.scm" Category="Physical Modeling" Comment="Scott van Duyne's piano" Examples="" Depend="env.scm generators.scm" AutoLoad="no" />
+    <instrument Name="p" File="piano.scm" Category="Physical Modeling" Comment="Scott van Duyne's piano" Examples="" Depend="env.scm generators.scm" AutoLoad="no" />
+    <instrument Name="parse-samples" File="samples.scm" Category="Sound Processing" Comment="finds samples in an audio file, returns list of times" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="pins" File="pins.scm" Category="Filtering" Comment="spectral modeling a la SMS (Xavier Serra)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="pluck" File="pluck.scm" Category="Physical Modeling" Comment="plucked string sound (David Jaffe)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="pqw" File="pqw.scm" Category="Waveshaping" Comment="phase quadrature waveshaping" Examples="pqw.clm" Depend="" AutoLoad="no" />
+    <instrument Name="pqw-vox" File="pqwvox.scm" Category="Waveshaping" Comment="like pqw but implements moving formant regions" Examples="pqwvox.clm" Depend="" AutoLoad="no" />
+    <!-- <instrument Name="pvoc" File="pvoc.scm" Category="Filtering" Comment="phase vocoder (Michael Klingbeil and Michael Edwards)" Examples="" Depend="" AutoLoad="no" /> -->
+    <instrument Name="resflt" File="resflt.scm" Category="Filtering" Comment="filter various kinds of input (Richard Karpen, Xavier Serra)" Examples="resflt.clm" Depend="" AutoLoad="no" />
+    <instrument Name="reson" File="reson.scm" Category="Frequency Modulation" Comment="fm formants (John Chowning)" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="rhodey" File="rhodey.scm" Category="Frequency Modulation" Comment="Perry Cook's electric piano" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="scratch" File="scratch.scm" Category="Sound Processing" Comment="fancier version of backandforth" Examples="scratch.clm" Depend="" AutoLoad="no" />
+    <instrument Name="singer" File="singer.scm" Category="Physical Modeling" Comment="spectral modelling" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="sndwarp" File="sndwarp.scm" Category="Sound Processing" Comment="Richard Karpen's SNDWARP instrument" Examples="" Depend="env.scm" AutoLoad="no" />
+    <instrument Name="spectra" File="spectra.scm" Category="Waveshaping" Comment="wavetable output" Examples="spectra.clm" Depend="" AutoLoad="no" />
+    <instrument Name="stereo-flute" File="stereo-flute.scm" Category="Physical Modeling" Comment="flute sound (Nicky Hind)" Examples="stereo-flute.clm" Depend="" AutoLoad="no" />  
+    <instrument Name="stochastic" File="stochastic.scm" Category="Granular Synthesis" Comment="flute sound ()" Examples="" Depend="" AutoLoad="no" />  
+    <instrument Name="touch-tone" File="touch-tone.scm" Category="Waveshaping" Comment="implement touch tone telephone sounds" Examples="touch-tone.clm" Depend="" AutoLoad="no" />
+    <instrument Name="tubebell" File="tubebell.scm" Category="Frequency Modulation" Comment="Perry Cook's tubular bell" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="two-tab" File="two-tab.scm" Category="Waveshaping" Comment="interpolate between stored waveforms" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="vkey" File="vkey.scm" Category="Sound Processing" Comment="virtual sampler" Examples="" Depend="expandn.scm fullmix.scm" AutoLoad="no" />
+    <instrument Name="vox" File="vox.scm" Category="Frequency Modulation" Comment="Mark LeBrun's fm voice instrument" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="wave" File="wave.scm" Category="Waveshaping" Comment="sinewave with envelope and gliss" Examples="wave.clm" Depend="" AutoLoad="no" />
+    <instrument Name="sc:wave" File="wavesc.scm" Category="Waveshaping" Comment="Supercollider wave instrument" Examples="" Synthdef="wavesc.scd" Depend="" AutoLoad="no" />
+    <instrument Name="wurley" File="wurley.scm" Category="Frequency Modulation" Comment="Perry Cook's Wurlitzer?" Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="za" File="za.scm" Category="Filtering" Comment="interpolating all pass filters" Examples="za.clm" Depend="" AutoLoad="no" />
+    <instrument Name="zc" File="zc.scm" Category="Filtering" Comment="interpolating comb filters (phasing)" Examples="zc.clm" Depend="" AutoLoad="no" />
+    <instrument Name="zipper" File="zip.scm" Category="Sound Processing" Comment="The 'digital zipper' effect." Examples="" Depend="" AutoLoad="no" />
+    <instrument Name="zn" File="zn.scm" Category="Filtering" Comment="interpolating notch filters" Examples="zn.clm" Depend="" AutoLoad="no" />   
+  </instruments>
+</instrument_table_data>

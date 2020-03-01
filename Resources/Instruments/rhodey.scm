@@ -1,0 +1,16 @@
+(definstrument (rhodey beg dur freq amp (base .5))
+  ;; from Perry Cook's Rhodey.cpp
+  (let ((osc0 (make-oscil freq))
+	 (osc1 (make-oscil (* freq 0.5)))
+	 (osc2 (make-oscil freq))
+	 (osc3 (make-oscil (* freq 15.0)))
+	 (ampenv1 (make-env (list 0 0 .005 1 dur 0) :base base :duration dur :scaler (* amp .5)))
+	 (ampenv2 (make-env (list 0 0 .001 1 dur 0) :base (* base 1.5) :duration dur :scaler (* amp .5)))
+	 (ampenv3 (make-env (list 0 0 .001 1 .25 0 (max dur .26) 0) :base (* base 4) :duration dur :scaler .109))
+	 (st (seconds->samples beg))
+	 (nd (seconds->samples (+ beg dur))))
+     (do ((i st (+ i 1)))
+	 ((= i nd))
+       (outa i (+ (* (env ampenv1) (oscil osc0 (* .535 (oscil osc1))))
+		  (* (env ampenv2) (oscil osc2 (* (env ampenv3) (oscil osc3)))))))))
+

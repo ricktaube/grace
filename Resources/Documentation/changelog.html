@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<style type="text/css" media="all">
+@import "cm.css";
+<!--
+li.change { display: list-item; list-style: circle; padding-bottom: .5em; margin: 0em 0em .5em 0em; border-bottom: 2pt dotted #999; }
+-->
+</style>
+<title>Changelog</title>
+</head>
+<body>
+
+<div id="content">
+  
+  <h1>Changelog</h1>
+
+    <h2>CM 3.11.0</h2>
+  <ul>
+    <li class="change">Switched to new build system using juce's Projucer.</li>
+    <li class="change">git is now used for source code manangement: https://sourceforge.net/p/commonmusic/grace/ci/master/tree/</li>
+    <li class="change">Bug fix: eliminated numerous memory leaks due to old code using non-RAII memory management.</li>
+  </ul>
+
+    <h2>CM 3.10.3</h2>
+  <ul>
+    <li class="change">Bug fix: Halim Beere found and fixed a bug in Sal's else clause expansions.</li>
+    <li class="change">Updated John Chowning's jcvoice instrument.</li>
+  </ul>
+
+  
+  <h2>CM 3.10.2</h2>
+  <ul>
+    <li class="change">Bug fix: Fixed unbound variable issue when writing clm files from sal constructs.</li>
+    <li class="change">Bug fix: Fixed osc:open reference in supercollider example files. This function has been removed, use osc:open-output and osc::open-input instead.</li>
+  </ul>
+
+  <h2>CM 3.10.1</h2>
+  <ul>
+    <li class="change">Upgraded to JUCE 5.2.0 to make fonts visible on Mac High Sierra and solve a keyboard lag in the code editor.</li>
+  </ul>
+
+
+  <h2>CM 3.10.0</h2>
+
+  <ul>
+    <li class="change">Change: Refactored CM code base so it now runs in latest version of JUCE (5) and S7 (5.1 of 1-May-17)</li>
+    <li class="change">Change: JUCE and S7 source trees are now included in the CM repo.</li>
+    <li class="change">Enhancement: Reimplemented OSC support using new JUCE 5 features so sending and sending and receiving OSC now works in all ports of CM and without  any external libraries/</li>
+    <li class="change">Enhancement:  new envelope functions <code>list-&gt;envelope</code>, <code>envelope-&gt;list</code>, <code>envelope-min</code>, <code>envelope-max</code>, <code>envelope-average</code>, <code>normalize-envelope</code>, <code>invert-envelope</code>, <code>reverse-envelope</code>, <code>read-envelope</code>, <code>interp-envelopes</code>. See the new <a href="cm.html#interpolation">Interpolation and Envelopes</a> section in the dictionary.
+    </li>
+
+    <li class="change">Enhancement:  new plotting functions <code>plot-lists</code>, <code>plot-envelopes</code>. </li>
+
+    <li class="change">Enhancement: infinite loops that collect data should no longer crash Grace. This detection is an experimental feature using the begin_hook features added to S7 Scheme by Bill Schottstaetd.  While the new detection feature should stop an infinite loop from crashing the app, it will <em>not</em> break out of (or really even detect) the infinite loop itself, so to exit the loop itself you will still need to press the <span class="emacscmd">COMMAND-.</span> abort command.</li>
+
+    <li class="change">Fix: <span class="menuitem">File&gt;Recently Loaded</span> menu now working again on Mac.</li>
+
+  </ul>
+
+  <h2>CM 3.9.0</h2>
+
+  <ul>
+   
+    <li class="change">Enhancement: Grace menu and application command loop completely reimplemented and reorganzied. On Mac the app's menubar is now located in the Mac main menu bar. (On Windows and Linux it continues to be located in the Console Window.)</li>
+    
+    <li class="change">Enhancement: All app windows and dialogs now use new look-and-feel developed by Andrew Burnson.</li>
+    
+    <li class="change">Enhancement: Switched to <a href="http://www.rossbencina.com/code/oscpack">oscpack</a> 1.1.0 for OSC support. OSC input and output now works on Mac, Linux and Windows.</li>
+
+    <li class="change">Enhancement: Redesigned players for Midi and Audio files (available in the Files menu).</li>
+    
+    <li class="change">Enhancement: Mac port now uses Apple's internal synth as the default MIDI sampler so external player is no longer required to produce sound. </li>
+    
+    <li class="change">Enhancement: Redesigned app logo and homepage.</li>
+
+    <li class="change">Enhancement: Sal and Scheme versions of all Help examples and tutorials are now provided. </li>
+
+    <li class="change">Enhancement: Revamped and checked all Help examples and tutorials.</li>
+
+    <li class="change">Enhancement: Upgraded to Juce 3.0.3, S7 Scheme 3.35 (17-Feb-14) and Sndlib 23</li>
+
+    <li class="change">Change: Added CM2 functions <code>keynum</code>, <code>pitch-class</code>, <code>hertz</code>.
+    The old function names <code>key</code>, <code>pc</code> and <code>hz</code> are depreciated but continue to work.
+    </li>
+
+  </ul>
+
+
+  <h2>CM 3.8.0</h2>
+
+  <ul>
+
+    <li class="change">Enhancement: The real-time scheduler now uses metronomes and is beat based. See the new <a href="cm.html#metronomes">Metronomes</a> section in the dictionary and the new <span class="menuitem">Help&gt;Examples&gt;Metronomes</span> example for more information. Metronomes were designed and implemented by Halim Beere (halimbeere@gmail.com)
+    </li>
+
+    <li class="change">Enhancement: sprout now supports "live coding" much better. When you sprout a processes together with an id the scheduler now replaces any currently running process with the same id with the newly sprouted version but without altering the next run time in the scheduler. This allows you to "redefine" processes on the fly.  See the updated <a href="cm.html#sprout">sprout </a> documentation and the new <span class="menuitem">Help&gt;Examples&gt;Live Coding</span> example for more information. (Halim Beere)
+    </li>
+
+    <li class="change">Enhancement: Real-time audio generation using audio plugins (AU, VST, ASIO). Type <span class="emacscmd">COMMAND-P</span> to load any plugin graph ("*.filtgraph") that you created and saved in JUCE's "Plugin Host" app.  See <a href="cm.html#plugins">Audio Plugins</a> for more information.
+    </li>
+
+    <li class="change">Enhancement: Audio file Player window has be remimplemented. Multiple players can now be open and playing at the same time, and each player provides a sampling rate slider for controling sampling rate during playback.
+    </li>
+
+    <li class="change">Enhancement: It is now possible to close any open MIDI input or output port by reselecting it in the device menu.
+    </li>
+    
+    <li class="change">Enhancement: Plot window reimplemented. Window now includes a tabbed editor and real-time audio playback for any plot. See the updated Lisp and Sal plotting examples in the <span class="menuitem">Help&gt;Examples</span> menu.
+    </li>
+
+    <li class="change">Enhancement: SDIF file importing using Ircam's SDIF library. See <a href="cm.html#sdif-import">sdif-import</a> and <a href="cm.html#sdif-import-spectra">sdif-import-spectra</a> for more information.
+    </li>
+    
+    <li class="change">Enhancement: new <span class="menuitem">Audio&gt;Play Midi File...</span> window plays midifiles the the selected output port. Audio&gt;Play Midi File...
+    </li>
+    
+    <li class="change">Enhancement: new function <a href="cm.html#qsort_">qsort!</a>
+    performs in line (destructive) sorting of lists and vectors. (The standard sort! function that is provided by s7 does destructive sorting of arrays but copies lists.)
+    </li>
+
+    <li class="change">Enhancement: The  <span class="menuitem">Open File...</span> dialog now defaults to the directory of the window's current file, or the working directory if the window has no file.</li>
+
+    <li class="change">Enhancement: new functions <a href="cm.html#random-series">random-series</a>, <a href="cm.html#list-intersection">list-intersection</a>, <a href="cm.html#list-union">list-union</a>, <a href="cm.html#list-difference">list-difference</a> and <a href="cm.html#remove-duplicates">remove-duplicates</a>.
+    </li>
+    
+    <li class="change">Enhancement: new function <a href="cm.html#golden">golden</a> returns the golden mean or inverse golden mean of two numbers.
+    </li>
+
+    <li class="change">Enhancement: new function <a href="cm.html#fibonacci">fibonacci</a> returns the nth number in the fibonacci series.
+    </li>
+
+    <li class="change">Enhancement: new function <a href="cm.html#mod">mod</a> allows a number or lists of numbers to be specified.
+    </li>
+
+    <li class="change">Enhancement: new function <a href="cm.html#minimum">minimum</a> allows numbers or a list of numbers to be specified.
+    </li>
+
+    <li class="change">Enhancement: new function <a href="cm.html#maxmimum">maximum</a> allows numbers or a list of numbers to be specified.
+    </li>
+
+
+    <li class="change">Enhancement: Upgraded to S7 1.105 (6-Feb-12) and latest versions of clm instruments in sndlib.
+    </li>
+
+    <li class="change">Change: function import-spear-frames has been renamed spear-import-spectra
+    </li>
+
+    <li class="change">Enhancement: Upgraded to Juce 1.54.27
+    </li>
+
+</ul>
+
+
+  <h2>CM 3.7.2</h2>
+
+  <ul>
+
+    <li class="change"> Enhancement: If a process using mp:midi is sprouted in the context of a Fomus score then mp:midi will automatically route its note date to the Fomus score, with the midi channel number used as the Fomus part id.</li>
+
+    <li class="change"> Enhancement: All random functions, including S7's <code>random</code> function,  now use a common random number generator. Use <a href="cm.html#random-seed">random-seed</a> to get and set the seed that controls random number generation.</li>
+
+    <li class="change"> Enhancement: The Hush command has been redefined to stop all sound output (not just midi) and is now situated in the top level audio menu along with the keyboard shortcut &#8984;-K. Selecting Hush triggers the following actions:
+    <ol>
+      <li>all processes running in the scheduler are flushed</li>
+      <li>midi output message queue is flushed</li>
+      <li>AllNotesOff is sent to each midi channel</li>
+      <li>audio playback transport is stopped if an audio window is open and playing</li>
+      <li>any running scheme expression is interrupted back to top level.</li>
+</ol>
+</li>
+
+    <li class="change">Enhancement:  New editor command Save As Version saves the current contents of the buffer to a new file version (the file name with a number attached to its end) never overwriting an existing version. The editor must already have a file for this command to be active.</li>
+    
+    <li class="change">Enhancement:  Grace now saves the position and size of the Console window on Quit and restores it to the same configuration on startup. </li>
+
+<li class="change">Enhancement: added <span class="menuitem">Eval&gt;Interrupt Scheme</span> menu item to the Editor's <span class="menuitem">Eval</span> menu. Use this command to abort Scheme's current execution if the process seems to be taking too long or if you managed to start an "infinite loop" running.  (Note: if the infinite loop is sending text output to the console then mouse and menu behavior will be very slow, try use the &#8984;-K shortcut to abort the loop ...)</li>
+    
+    <li class="change">Enhancement:  Audio Playback window now supports the following keyboard shortcuts:
+<ul>
+  <li>Spacebar - play/pause</li>
+  <li>Return - move cursor to start of file</li>
+  <li>Right-arrow - move right in file</li>
+  <li>Left-arrow - move left in file</li>
+  <li>Command-W - close window</li>
+  <li>Command-M - minimize window</li>
+</ul>
+</li>
+
+<li class="change">Enhancement:  mp:on and mp:off now support midi tunings and floating-point keynums identical to mp:midi.</li>
+
+    <li class="change">Enhancement: new instruments parse-samples and cut-samples for parsing samples from an audio file. See Instrument Browser window for more information.</li>
+    
+    <li class="change">Enhancement: the <a href="cm.html#file-version">file-version</a> function now has an optional  <var>nooverwrite</var> arg that, if set to true, returns a versioned file name that is guaranteed to not reference an existing file. </li>
+    
+    <li class="change">Enhancement: in the editor double-clicking the left-side <code>&quot;</code> character of a string now selects the whole string.</li>
+
+    <li class="change">Enhancement: CM dictionary now has an Index section, the editor's &#8984;-D (documentation lookup) command now works for all entries in the dictionary.</li>
+
+    <li class="change">Enhancement: updated to S7 Scheme 1.83 (14-Mar-11).</li>
+
+    <li class="change">Enhancement: upgraded to latest Fomus framework (version 0.1.17).</li>
+
+    <li class="change">Change: each unique Fomus output file name now has only one fomus score associated with it and if the file is regenerated its fomus score is cleared and reused. To output different versions of a file use the file-version function to create new (versioned) file names and scores each time.
+</li>
+
+    <li class="change">Change: the Fomus menu in the Code Editor window is now the same as in the Console Window.</li>
+    
+    <li class="change">Bug Fix: fixed a bug in Play Audio File window that moved cursor past end of file.</li>
+
+    <li class="change">Bug Fix: fixed a bug in the midi output queue that sometimes caused data to be double-freed and producing a noticible glitch in real-time sound output.</li>
+
+    <li class="change">Bug Fix: fixed a bug in documentation lookup for symbols that caused some symbols to not be found.</li>
+
+</ul>
+
+  <h2>CM 3.7.1</h2>
+
+<ul>
+ <li class="change">Enhancement: upgraded to latest Fomus framework (version 0.1.12)</li>
+    <li class="change">Bug fix: fixed several csound bugs: "cs:i" and "cs:f" now quotify string arguments, renamed cs:data to cs:event, orc file and sco file are now quoted in shell call.</li>
+    <li class="change">Bug fix: the first level of escape char '\' is now removed in Sal2 and Sal1 strings.</li>
+    <li class="change">Bug fix: fixed bug in rangauss that didn't allow the optional second argument to be provided.</li>
+    <li class="change">Bug fix: added back --gracecl build option to premake.lua. to build gracecl do: "premake --target gnu --sndlib /path/to/sndlib" and then "make". Note that you must still install sndlib in order to build gracecl.</li>
+    <li class="change">Bug fix: fixed several compile bugs in CommonLisp.cpp that prevented GraceCl from compiling.</li>
+  </ul>
+
+  <h2>CM 3.7.0</h2>
+  <ul>
+    <li class="change">Enhancement: updated to S7 Scheme 1.72 (23-Oct-10) and latest CLM runtime and instruments.</li>
+    <li class="change">Enhancement: updated to latest Fomus framework (0.1.12-alpha-rc6 )</li>
+    <li class="change">Enhancement: new <span class="menuitem">Midi Out&gt;Recording</span> menu lets you record, save, import and play back anything sent out the port.</li>
+    <li class="change">New functions: <a href="cm.html#mouse-button">mouse-x</a>  <a href="cm.html#mouse-y">mouse-y</a> <a href="cm.html#mouse-button">mouse-button</a> return mouse values.</li>
+    <li class="change">Enhancement: new function <a href="cm.html#midifile-import">midifile-import</a></li>
+    <li class="change">Enhancement: new function <a href="cm.html#midifile-header">midifile-header</a></li>
+    <li class="change">Enhancement: new function <a href="cm.html#file-version">file-version</a></li>
+    <li class="change">Enhancement: Console window displays a silver frame while Lisp is waiting for input. The frame disappears when input is executed to indicate that Lisp is busy and unavailable for input during this time (only works on OSX).</li>
+    <li class="change">Bug fix: fixed bug in markov-analyze that caused infinite loop in some cases.</li>
+    <li class="change">Bug fix: fixed bug in pathname-directory and pathname-name that returned bogus pathname components.</li>
+    <li class="change">Bug fix: fixed some indentation bugs for SAL1 and SAL2 edit buffers.</li>
+  </ul>
+
+  <h2>CM 3.6.0</h2>
+  <ul>
+
+    <li class="change">Enhancement: Grace's Editor has been completely reimplemented using JUCE's new CodeDocuement, CodeTokenizer and CodeEditorComponent classes. This major improvement is a complete rewrite of the editor and its low-level string lexing and parsing routines. New features of the editor include:
+    <ul>
+      <li>Extremely fast syntax highlighting.</li>
+      <li>Very large files load quickly.</li>
+      <li>New Color Themes can be applied on a per buffer basis.</li>
+      <li>New Customization Comments let you to save the buffer's current syntax, theme, font-size, lines and columns with the file, these customizations will be applied automatically when the file is reloaded.</li>
+      <li>Cleaner editor menu layout, submenus have items to save current setting as a global preference.</li>
+    </ul>
+  </li>
+
+<li class="change">Enhancement: SAL 2.0 algorithmic language. SAL is an easy-to-learn, infix substitute for Scheme. See <span class="menuitem">Help &gt; Tutorials &gt; Sal 2.0 Quick Tour</span> for a simple introduction.
+</li>
+
+<li class="change">Enhancment: Csound settings improved: options list now a preference, header editor fixed.</li>
+<li class="change">Enhancment: Upgraded code base to latest JUCE (1.52) and SndLib (1.54).</li>
+<li class="change">Enhancment: All Sal tutorials and examples converted to Sal2.</li>
+<li class="change">Enhancment: CM documentation now reflects Sal2 syntax.</li>
+<li class="change">Enhancment: New Files tutorials for both Sal and Scheme.</li>
+<li class="change">Enhancment: New Fomus examples for Scheme.</li>
+
+</ul>
+
+  <h2>CM 3.5.2</h2>
+<ul>
+    <li class="change">Sndlib Enhancement: <code>fullmix</code> takes negative srates and srate envelopes.</li>
+    <li class="change">Sndlib Enhancement: <code>scaled-to:</code> now works in <code>with-sound</code>.</li>
+    <li class="change">Bug fix:  <code>expandn</code> now runs many times faster.</li>
+    <li class="change">Enhancement: improvements to MIDI output timing result in fewer clipped repeated notes in the case of duration == rhythm.</li>
+    <li class="change">Bug fix: Several Fomus bugs fixed. </li>
+    <li class="change">Bug fix: added clm_error_handler for reporting low level C errors in CLM.</li>
+    <li class="change">Bug fix: Fixed several instrument dependencies in instrument browser.</li>
+    <li class="change">Bug fix: Updated S7 runtime (tarball of March 9).</li>
+</ul>
+
+  <h2>CM 3.5.1</h2>
+  <ul>
+    <li class="change"> Enhancement: Updated runtime to S7 Scheme 1.45 (27-Feb-10)</li>
+    <li class="change"> Enhancement: Updated embedded SndLib instrument distribution, added <code>cmvrev</code> and <code>stochastic</code> instruments to browser. </li>
+    <li class="change">Bug fix: fixed misnamed function bug in <code>fm</code>.</li>
+    <li class="change">Bug fix: fixed  bug in <code>load</code> that didn't added definitions to the global environment in some cases.</li>
+    <li class="change">Bug fix: fixed bug in <code>error</code> that broke reporting on incorrect opt/key arguments.</li>
+    <li class="change">Bug fix: fixed bias bug in <code>shuffle</code> (Michael Klingbeil).</li>
+  </ul>
+  
+  <h2>CM 3.5.0</h2>
+
+  <ul>
+    
+    <li class="change"> New Feaure: <a href="cm.html#fomusfile"><code>fomusfile</code></a> provides a simple way to create Fomus score can be created.</li>
+    <li class="change"> Enhancement: Fomus interface greatly speeded up</li>
+    <li class="change"> Enhancement: SAL printing has been greatly speeded up</li>
+    <li class="change"> Enhancement: SAL tokenizing is now in C with improvement in speed and consing.</li>
+    <li class="change"> New feaure: SAL command <a href="cm.html#soundfile"><code>soundfile</code></a>  creates a sound file from  enclosed instrument calls.</li>
+    <li class="change"> New feaure:  <code>define function</code> in SAL now always creates a function with opt/key parameters. To specify an &amp;rest argument add three dots to the parameter's name. This new behavior is implemented using S7's <code>define*</code> primative and should be backward compatible.</li>
+
+    <li class="change">Enhancement: Instrument Browser now located at the toplevel Audio menu and can be opened using the keyboard shortcut Command-I.</li>
+
+    <li class="change">Enhancement: new SuperCollider Scheme example.</li>
+
+    <li class="change">Enhancement: new SAL tutorial for SndLib.</li>
+
+    <li class="change">Enhancement: Audio File Player has been improved, now allows zooming and scrolling the waveform display, buffer size is saved as a preference.</li>
+
+    <li class="change"> Enhancement: load will search for files in the embedded instrument distribution if the filename has no directory component and the file does not otherwise exist in the current working directory.</li>
+
+    <li class="change">Enhancement: Receiving Midi and Osc data has been improved and made more consistent. See <a href="cm.html#osc:receiver"><code>osc:receiver</code></a>, <a href="cm.html#osc:receiver"><code>osc:receiver?</code></a>, <a href="cm.html#mp:receiver"><code>mp:receiver</code></a>, <a href="cm.html#mp:receiver"><code>mp:receiver?</code></a> for more information.</li>
+    
+    <li class="change">Enhancement: Osc Port now supports sending OSC bundles. See <a href="cm.html#osc:bundle"><code>osc:bundle</code></a> for more information.</li>
+    
+    <li class="change">Enhancement: <a href="cm.html#osc:message"><code>osc:message</code></a> now allows data to be specified as argument values or as a single list of values.</li>
+    
+    <li class="change">Enhancement: New function <code>spectrum-rescale!</code> rescales frequencies of a spectrum.</li>
+
+    <li class="change">Enhancement: <a href="cm.html#mp:instruments"><code>mp:instruments</code></a> now supports instrument names (strings) as well as program changes. Partial names are also supported: the first instrument that matches or contains the partial name as a substring will be selected.</li>
+    
+    <li class="change">Enhancement: <a href="cm.html#divide"><code>divide</code></a> now allows its second argument to be a list of denominators.</li>
+
+    <li class="change">Incompatible change: function <code>mp:inhook</code> removed.</li>
+
+    <li class="change">Incompatible change: function <code>osc:hook</code> function removed.</li>
+
+   <li class="change">Incompatible change: old function <code>spectrum-rescale!</code> has been renamed <code>spectrum-modify!</code>.</li>
+
+    <li class="change">Bug fix: function <code>drunk</code> now accepts numeric modes and an avoid parameter.</li>
+
+  </ul>
+
+
+  <h2>CM 3.4.0</h2>
+  
+  <ul>
+
+ <li class="change">New feature: <span class="menuitem">Audio &gt; Osc</span>  lets you send and receive OSC data over the network. See <a href="cm.html#osc">Open Sound Control</a> documentation for more information.</li>
+
+  <li class="change">New feature: <span class="menuitem">Console &gt; Themes</span> lets you select different color schemes for the Console window.</li>
+
+  <li class="change">New feature: <span class="menuitem">Audio &gt; SndLib &gt; Audio Format</span>  lets you specify the default output file audio format.</li>
+
+   <li class="change">New feature: <span class="menuitem">Help</span> menu now provides separate submenus for Sal and Scheme examples and tutorials. Scheme versions of the tutorials were created by ugurguney@gmail.com.</li>
+
+  <li class="change">New feature: All the bundled examples, tutorials and CLM instruments can be restored to disk using the <span class="menuitem">Save All...</span> menu items in the respective menus.</li>
+    
+  <li class="change">New feature: implementation of one and two dimensional cellular automata, including the ability to visualize changing automata states in real time in an associated State Window. See <a href="cm.html#automata">Cellular Automata</a> for more information.</li>
+    
+  <li class="change">New function: <a href="cm.html#spectrum-invert_"><code>spectrum-invert!</code></a> inverts spectrum around its minimum frequency.</li>
+  <li class="change">New function: <a href="cm.html#deltas"><code>deltas</code></a> returns a list of differences between specified numbers.</li>
+  <li class="change">New function: <a href="cm.html#harmonics"><code>harmonics</code></a> returns a list of harmonic ratios between two harmonic numbers.</li>
+
+  <li class="change">Enhancement: upgraded the built-in clm instruments to latest sndlib versions.</li>
+  <li class="change">Enhancement: In midi input, noteOn messages with 0 velocity are converted to noteOff.</li>
+
+  <li class="change">CM code base moved to JUCE 1.50 (git tip).</li>
+
+  <li class="change">Bug fix: fixed a bug in <span class="menuitem">File &gt; Load File...</span> that crashed the app when very large SAL files were loaded.</li>
+  <li class="change">Bug fix: markov-analyze no longer crashes the app when printing long messages.</li>
+  <li class="change">Bug fix: fixed cm's error-hook to handle string args coming from built-in s7 error signals.</li>
+  <li class="change">Bug fix: fixed missing function bug in rescale-spectrum.</li>
+  <li class="change">Bug fix: Recently opened files now lists newly created/saved files and files that were opened using drag and drop.</li>
+  <li class="change">Bug fix: plot axis specification with values but no type is automatically set to generic.</li>
+  <li class="change">Bug fix: fixed make-graph to test for embedded patterns in data.</li>
+  <li class="change">Bug fix: Numerous FOMUS fixes.</li>
+  </ul>  
+
+  <h2>CM 3.3.0 [svn: 1770]</h2>
+
+ <ul>  
+     <li class="change">New audio target: <a href="http://fomus.sf.net">FOMUS</a>, a music notation package by David Psenicka that transforms symbolic score information into fully notated manuscripts. For more information about using Fomus in Common Music see the <a href="cm.html#fomus">Fomus documentation</a> and the examples and tutorials under the <span class="menuitem">Help&gt;</span> menu. Note that to work with Fomus in Common Music you need to <a href="http://sourceforge.net/projects/fomus/files/"> download and install Fomus</a> on your computer. 
+   </li>
+
+     <li class="change">New feature:  <a href="cm.html#plotting">Plot windows</a>  support display, editing and sonification of multidimensional data sets. See  <span class="menuitem">Help&gt;Examples&gt;Plotting</span> menu for examples of creating plot displays.</li>
+
+    <li class="change">New feature: Editor window 'triggers' for
+      interactive evaluation. To add a trigger to a buffer use the
+       <span class="menuitem">Eval&gt;Triggers</span> menu. Once a trigger is attached you can use it to
+      evaluate the buffer or buffer selection interactively. There are currently four types of trigger: button, counter, slider and midi keyboard. Triggers can be
+      configured interactively and restored/saved to XML descriptions.
+      </li>
+
+    <li class="change">New feature: application icons designed by Tobias Kunze for Mac and Windows</li>
+
+    <li class="change">New feature: Drag and Drop supported file types on Console window and Application Icon.  Source files are opened in the editor, Midi files are opened in the plotter.</li>
+
+     <li class="change">New feature: Command line options are now available for the 'cm' console application. Type 'cm --help' for more information.</li>
+
+     <li class="change">New feature:  <span class="menuitem">Audio&gt;Import
+     Midifile...</span> imports data from MIDI files to Editor windows, the
+     Console window or the clipboard.</li>
+
+    <li class="change">New feature:  <span class="menuitem">Audio&gt;Midifile
+    Settings...</span> for configuring midifile writing. The default time format
+    is now ticks per quarter (480) and the default file tempo is 60 bpm.</li>
+
+    <li class="change">New feature:
+     <span class="menuitem">Audio&gt;MidiOut&gt;Instruments...</span> for Midi instrument channel
+    assignment.</li>
+
+    <li class="change">New feature:  SndLib's Instrument Browser has new AutoLoad button to mark instrument for autoloading at startup.</li>
+
+    <li class="change">New feature: The Editor's <span class="menuitem">Eval&gt;Scheduler&gt;</span> menu now contains items to stop/pause/resume any musical processes that are currently executing. These items are only available if the scheduler is actually running processes.</li>
+
+    <li class="change">New function:
+    <a href="./cm.html#mp:instruments">mp:instruments</a>
+    </li>
+    
+    <li class="change">New function:
+    <a href="./cm.html#drunk">drunk</a>
+    </li>
+
+    <li class="change">New function:
+    <a href="./cm.html#rest_">rest?</a>
+    </li>
+   
+    <li class="change">New function:
+    <a href="./cm.html#make-repeater">make-repeater</a>
+    </li>
+
+    <li class="change">New function:
+    <a href="./cm.html#directory">directory</a>
+    </li>
+
+    <li class="change">New function:
+    <a href="./cm.html#ratio-_cents">ratio-&gt;cents</a>
+    </li>
+
+    <li class="change">New function:
+    <a href="./cm.html#ratio-_steps">ratio-&gt;steps</a>
+    </li>
+
+    <li class="change">New function:
+    <a href="./cm.html#cents-_ratio">cents-&gt;ratio</a>
+    </li>
+
+     <li class="change">Enhancement: Console window now pops to top when errors are printed</li>
+
+
+     <li class="change">Enhancement: Grace now uses native Yes/No/Cancel dialogs for Mac and Windows. Thank you Andrew Burnson!</li>
+
+     <li class="change">Enhancement: Error messages in Scheme now look exactly like any other error message (s7 scheme only). Thank you Bill Schottstaedt!</li>
+
+     <li class="change">Enhancement: the current 'working directory' is now saved across sessions
+ as a preference.</li>
+
+     <li class="change">Enhancement: the current instrument assignments are now saved in midifiles by default. Use  <span class="menuitem">Audio&gt;Midifile Options...</span> to toggle the setting.</li>     
+
+    <li class="change">Enhancement: Updated Sndlib instruments
+    including vkey (vitual sampler), piano.scm and
+    animals.scm. Instrument dependancies are also loaded and loaded
+    instruments are now colored green in the browser. </li>
+
+
+    <li class="change">Enhancement: Find and Replace tool for Text
+    Editor</li>
+
+    <li class="change">Enhancement: Source tree includes the
+    amalgamated JUCE sources so an external JUCE installation is no
+    longer required to build CM. </li>
+
+    <li class="change">Enhancement: New Console menu commands: Beep On
+    Errors, Copy, Select All, Clear Selection.</li>
+
+    <li class="change">Enhancement: Audio Player is resizable and has
+    a sleek new transport widget with positional slider. Thanks to
+    Andrew Burnson.</li>
+
+    <li class="change">Enhancement: Console and Text Editor font sizes
+    now range from 9 to 32.</li>
+
+    <li class="change">Enhancement: Websites for SndLib and Chicken now appear in the  <span class="menuitem">Help&gt;Websites</span> menu.</li>
+
+
+    <li class="change">Enhancement: Editor menus slightly reorganized: some ititems in the Eval menu have been moved to the Edit menu and lookup symbol documentation (Command-D) is now under  <span class="menuitem">Help&gt;Documentation&gt;Lookup Symbol...</span> </li>
+
+    <li class="change">Bug fix: The 'note' function no longer unsets the default octave if a rest is encountered.</li>
+
+    <li class="change">Bug fix: The 'rhythm' function now handles negative rhythm names as rest markers.</li>
+
+    <li class="change">Bug fix: The 'Hush' menu command for Midi Out port now works correctly. Use (stop) to flush processes and pending output in Scheme code.</li>
+
+    <li class="change">Bug fix: The 'cm' console app now quits more gracefully. Use the lisp function (quit) to quit the app (the 'q' command has been removed).</li>
+
+    <li class="change">Bug fix: fixed scheduler bug that did not preserve insertion order for nodes with equal time stamps. This may effect scheduling!</li>
+
+    <li class="change">Bug fix: fixed transpose function to transpose note names.</li>
+    
+    <li class="change">Bug fix: The 'cm' console app now reads input forms that include embedded comments.</li>
+
+    <li class="change">Bug fix: Audio Player's waveform display now works on Windows an Linux.</li>
+    <li class="change">Bug fix: Audio Player's Settings... button is now disabled during audio playback.</li>
+    <li class="change">Bug fix: Evaling regions in SAL buffers now works correctly.</li>
+    <li class="change">Bug fix: COMMAND-A (Select All) in editor now works correctly.</li>
+
+      <li class="change">New application target: the GraceCL application is modified version
+     of the Grace environment for use with Common Lisp (SBCL or CLisp)
+     and Common Music 2 releases (version 2.12.0 or higher). GraceCL
+     is intened to be a replacement for running CM2 under Emacs and
+     Slime, as such it does not contain an Audio menu or real time
+     scheduling. To learn how to use GraceCL, start the application
+     and follow the instructions printed in the Console window. 
+    </li>
+
+
+</ul>
+
+
+
+  <h2>Version 3.2.4</h2>
+  
+  <ul>
+    <li class="change">Enhancement: SndLib audio and S7 Scheme running on Windows! Thanks to Michael Gogins, who wrote the SCons script that compiles sndlib.a on MingW.</li>
+
+    <li class="change">Enhancement: Midi Input port is working. Use <span class="menuitem">Audio&gt;Midi In&gt;</span> menu to select devices, customize channel and message filtering and test input. See  <a href="cm.html#midi-in">Midi In documentation</a> for more information. </li>
+    
+    <li class="change">Enhancement: new Csound audio target. Use <span class="menuitem">Audio&gt;Csound&gt;</span> menu to configure your Csound environment. See <a href="cm.html#csound">csound documentation</a> and the Help menu's <a href="csound.sal">csound example</a> for more information.</li>
+
+    <li class="change">Enhancement: added <a href="cm.html#sndlib"> SndLib documentation</a>.</li>
+
+    <li class="change">Cleaned up numerous dictionary entries including a new entry for <a href="cm.html#sprout">sprout</a>. Dictionary now validates as xhtml strict.</li>
+
+    <li class="change">System now builds on Windows/Mingw with Chicken 3.0.0. Carlos Pita
+    reports that you can build with the latest Chicken (3.4.0) if you
+    simply regenerate ChickenBridge.cpp. Instructions are in
+    <a href="../../readme.text">readme.text</a>.</li>
+
+    <li class="change">Enhancement: Carlos Pita cleaned up the premake.lua script and
+    added support for linking against installed systems. To link
+    against an installed dependancy simply pass the install root as
+    the value of the option eg '--juce /usr/local/' </li>
+
+    <li class="change">Enhancement: audio player now sports a realtime waveform view
+    (lifted from the Juce Demo app...)</li>
+    
+    <li class="change">Enhancement: new <span class="menuitem">File&gt;Load...</span> menu item in Console and
+    Editor works for both .scm and .sal files.</li>
+
+    <li class="change">Enhancement: new <span class="menuitem">File&gt;Load Recent&gt;</span> menu holds last 8 loaded
+    files for fast loading.</li>
+
+    <li class="change">Enhancement: <span class="menuitem">File&gt;Set Init File</span> menu item sets a lisp 
+    file to autoload at startup.</li>
+
+    <li class="change">Enhancement: added "Clear Init File" menu item for removing a
+    lisp startup file.</li>
+
+    <li class="change">Bug fix: (Linux/alsa) added flush to sendMessageNow to fix jitter. </li>
+
+    <li class="change">Bug fix: cut command works correctly now.</li>
+
+    <li class="change">Bug fix: removed spurious AudioFile entry from Help menu and
+    tidied up the menu.</li>
+
+  </ul>  
+
+<hr/>
+<p><!-- hhmts start -->Last modified: Fri Jan 10 06:31:42 CST 2020 <!-- hhmts end --></p>
+
+</div> <!-- end content -->
+</body>
+</html>

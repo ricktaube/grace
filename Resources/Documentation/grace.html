@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<style type="text/css" media="all">
+@import "cm.css";
+</style>
+<title>Grace</title>
+</head>
+<body>
+
+<div id="content">
+
+<h1>Grace</h1>
+
+
+<ul>
+  <li><a href="#introduction">I. Introduction</a></li>
+  <li><a href="#console">II. Console Window</a></li>
+  <li><a href="#editor">III. Text Editor</a>
+</ul>
+
+<h2 id="editor">I. Introduction</h2>
+
+<p>Grace is a <em>graphical realtime algorithmic composition environment</em> implemented in <a ref="http://www.rawmaterialsoftware.com/juce/">JUCE</a> (C++) and <a href="cm.html">Common Music 3</a>. Grace provides a fully GUI for algorithmic composio with the following features:</p>
+
+<ul>
+  <li>Drag-and-drop app
+
+
+
+<h2 id="editor">II. Console Window</h2>
+
+<p>
+
+The Console window is the main window for Grace, there is only one
+Console window and closing it will quit the application.  The purpose
+of the Console is to display messages, errors and warnings produced by
+executing Grace commands and to serve as the <em>standard ouput</em>
+for Lisp.
+
+<p> A few types of messages have a special coloring in the console window : </p>
+
+<ul>
+  <li><span class="graceerror">Error messages (red)</span></li>
+  <li><span class="gracewarning">Warning messages (orange)</span></li>  
+  <li><span class="gracevalues">Success messages (green)</span></li>  
+</ul>
+
+<h3 >File Menu</h3>
+<p>The File menu allows you configure, start, stop and customize
+aspects of a Lisp session.</p>
+
+<div class="float">
+<table class="float" width="75%">
+  <tr><td> <span class="menuitem"> New Editor </span> </td> <td>  </td> </tr>
+</table>
+</div>
+
+
+<h3 >Console Menu</h3>
+<h3 >Audio Menu</h3>
+<h3 >Windows Menu</h3>
+<h3 >Help Menu</h3>
+
+
+<h2 id="editor">III. Text Editor</h2>
+
+<p>The Grace editor supports Lisp, SAL and Text editing modes.  When
+you open a file using <span class="menuitem"> File&gt;Open</span> the
+editing mode is selected automatically according to the file's
+extension: <p>
+
+<table>
+  <tr><td>Lisp:</td> <td>.lisp .lsp .cl .scm .cm .clm .ins .cmn .fms .asd</td></tr>
+  <tr><td>SAL:</td>  <td> .sal </td> </tr>
+  <tr><td>Text:</td> <td> .text .txt  .* </td> </tr>
+</table>
+
+<p> Both Lisp and SAL editing modes provide <em>syntax
+highlighting</em> (code coloring), syntactic line indentation (Tab key)
+and evaluation services.
+To evaluate a Lisp or SAL expression, place the cursor at the end of
+the sexpr and type <span class="emacscmd">COMMAND-Enter</span>.
+You can change the current editing mode in an open using the
+<span class="menuitem">Options&gt;Syntax</span> menu.
+
+
+<!-- <p>Note: In GraceCL, Common Lisp must be running in order to execute
+SAL or Lisp code. See <a href="console.html#Lisp">Console Help</a> for
+more information about starting Lisp.  </p>
+-->
+
+<h3>Command Key Shortcuts</h3>
+
+<p> Command key shortcuts for accessing common text editing operations
+are listed below.</p>
+
+<ul>
+<li>On Linux and Windows the Command key is the Control key.</li>
+<li>On OS X the Command key is the Apple key just to the left of the Spacebar.
+</ul>
+
+<p>On Linux and Windows the command key shortcuts are disabled if
+Emacs Mode is turned on because Emacs uses the Command key as its
+Control key.  On OS X the Command key is active even when Emacs Mode
+is turned on.  </p>
+
+<div class="float">
+<table class="float" width="75%">
+<tr><td><span class="emacscmd">COMMAND-N</span></td><td>new editing window</td></tr>
+<tr><td><span class="emacscmd">COMMAND-O</span></td><td>open file</td></tr>
+<tr><td><span class="emacscmd">COMMAND-S</span></td><td>save</td></tr>
+<tr><td><span class="emacscmd">COMMAND-SHIFT-S</span></td><td>save as</td></tr>
+<tr><td><span class="emacscmd">COMMAND-R</span></td><td>revert</td></tr>
+<tr><td><span class="emacscmd">COMMAND-W</span></td><td>close window</td></tr>
+<tr><td><span class="emacscmd">COMMAND-Z</span></td><td>undo</td></tr>
+<tr><td><span class="emacscmd">COMMAND-SHIFT-Z</span></td><td>redo</td></tr>
+<tr><td><span class="emacscmd">COMMAND-X</span></td><td>cut</td></tr>
+<tr><td><span class="emacscmd">COMMAND-C</span></td><td>copy</td></tr>
+<tr><td><span class="emacscmd">COMMAND-V</span></td><td>paste</td></tr>
+<tr><td><span class="emacscmd">COMMAND-A</span></td><td>select all</td></tr>
+<tr><td><span class="emacscmd">COMMAND-F</span></td><td>find and replace</td></tr>
+<tr><td><span class="emacscmd">COMMAND-ENTER</span></td><td>execute Lisp or SAL code</td></tr>
+<tr><td><span class="emacscmd">COMMAND-D</span></td><td>documentation lookup</td></tr>
+<tr><td><span class="emacscmd">COMMAND-&larr;</span></td><td>beginning of line</td></tr>
+<tr><td><span class="emacscmd">COMMAND-&rarr;</span></td><td>end of line</td></tr>
+<tr><td><span class="emacscmd">COMMAND-&uarr;</span></td><td>beginning of buffer</td></tr>
+<tr><td><span class="emacscmd">COMMAND-&darr;</span></td><td>end of buffer</td></tr>
+</table>
+
+</div>
+
+<h3>Emacs Lite Commands</h3>
+
+</p>If <span class="menuitem">Edit&gt;Emacs Mode</span> is turned
+on the code editor supports the Emacs commands listed below. Note that on Windows and Linux the default setting for Emacs mode is off because the Emacs' Control key is the same as Windows' command key </p>
+
+<p>Emacs commands are keystroke combinations involving the CONTROL
+and/or META keys combined with one (or more) additional keys.  In the
+documentation that follows pressing CONTROL or META is shortened to C-
+and M- respectively. For example, C-f means to hold down the Control
+key and type the f key and C-M-f means to hold down both the Control
+and Meta keys while typing the f key. Note: on OS X the Meta key is
+the Option key just right of the control key. On Linux and Windows the
+Meta key is the Alt key just to the left of the Spacebar.  </p>
+
+<h4>Cursor Motion</h4>
+<table class="float" width="75%">
+<tr><td><span class="emacscmd">C-f</span></td><td>forward character</td></tr>
+<tr><td><span class="emacscmd">C-b</span></td><td>backward character</td></tr>
+<tr><td><span class="emacscmd">M-f</span></td><td>forward word</td></tr>
+<tr><td><span class="emacscmd">M-b</span></td><td>backward word</td></tr>
+<tr><td><span class="emacscmd">C-M-f</span></td><td>forward expression</td></tr>
+<tr><td><span class="emacscmd">C-M-b</span></td><td>backward expression</td></tr>
+</table>
+
+<h4>Line Motion</h4>
+<table class="float" width="75%">
+<tr><td><span class="emacscmd">C-a</span></td><td>beginning of line</td></tr>
+<tr><td><span class="emacscmd">C-e</span></td><td>end of line</td></tr>
+<tr><td><span class="emacscmd">C-n</span></td><td>next line</td></tr>
+<tr><td><span class="emacscmd">C-p</span></td><td>previous line</td></tr>
+</table>
+
+<h4>Scrolling</h4>
+<table class="float" width="75%">
+<tr><td><span class="emacscmd">C-v</span></td><td>forward screen</td></tr>
+<tr><td><span class="emacscmd">M-v</span></td><td>backward screen</td></tr>
+<tr><td><span class="emacscmd">M-&gt;</span></td><td>beginning of file</td></tr>
+<tr><td><span class="emacscmd">M-&lt;</span></td><td>end of file</td></tr>
+</table>
+
+<h4>Editing</h4>
+<table class="float" width="75%" >
+<tr><td><span class="emacscmd">C-d</span></td><td>delete character</td></tr>
+<tr><td><span class="emacscmd">M-d</span></td><td>delete word</td></tr>
+<tr><td><span class="emacscmd">C-M-d</span></td><td>delete expression</td></tr>
+<tr><td><span class="emacscmd">C-k</span></td><td>kill to end of line</td></tr>
+<tr><td><span class="emacscmd">C-y</span></td><td>yank kills back</td></tr>
+<tr><td><span class="emacscmd">C-o</span></td><td>open new line</td></tr>
+<tr><td><span class="emacscmd">C-o</span></td><td>open new line</td></tr>
+<tr><td><span class="emacscmd">M-l</span></td><td>lower case word</td></tr>
+<tr><td><span class="emacscmd">M-u</span></td><td>upper case word</td></tr>
+<tr><td><span class="emacscmd">M-c</span></td><td>capitalize word</td></tr>
+</table>
+
+<h4>File Commands</h4>
+<table class="float" width="75%" >
+<tr><td><span class="emacscmd">C-x C-f</span></td><td>open file</td></tr>
+<tr><td><span class="emacscmd">C-x C-s</span></td><td>save file</td></tr>
+<tr><td><span class="emacscmd">C-x C-w</span></td><td>save file to new name</td></tr>
+<tr><td><span class="emacscmd">C-x C-r</span></td><td >reload file</td></tr>
+<tr><td><span class="emacscmd">C-x C-c</span></td><td>close window</td></tr>
+</table>
+
+<h4>Syntax Specific Commands</h4>
+<table class="float" width="75%" >
+<tr><td><span class="emacscmd">C-x C-e</span></td><td>lisp eval last sexpr</td></tr>
+<tr><td><span class="emacscmd">Tab</span></td><td>indent line</td></tr>
+<tr><td><span class="emacscmd">M-q</span></td><td>reformat comment block</td></tr>
+</table>
+
+</div>
+</body>
+</html>

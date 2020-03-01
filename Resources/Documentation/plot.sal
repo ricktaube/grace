@@ -1,0 +1,211 @@
+;
+;; Plotting
+;
+
+; To evaluate code put the cursor after each expression and press
+; Command-Return, then check the console window for any output.
+
+; Three layers of points in different styles
+
+plot(title: "My Plots",
+     xaxis: "unit",
+     yaxis: "unit",
+     layer: {0 .1 .25 .2 .75 .4 1 .9}, title: "foo", style: "bar",
+     layer: {0 1 .15 .5 .30 .2 .60 .1 100 0}, title: "bar", style: "point",
+     layer: {0 0 .5 1 1 0}, title: "baz", style: "envelope"
+     )
+
+; Compute layers on the fly
+
+begin with p1 = {}, p2 = {}, p3 = {}
+  loop for x from 0 to 1 by .2 set p1 ^= list(x, random(1.0))  end
+  loop for x from 0 to 1 by .1 set p2 ^= list(x,x) end
+  loop for x from 0 to 1 by .25 set p3 ^= list(x, expt(10, - x)) end
+  plot(p1, p2, p3)
+end
+
+; Piano roll plot of points with 5 fields of data
+
+loop with poi = {}, amp = .7
+  repeat 20
+  for beg = 0 then (beg + random(1.0))
+  for dur = pick(.1, .2, .3)
+  for knum = between(60, 96)
+  for chan = random(16)
+  set poi &= list(beg, dur, knum, amp, chan)
+  finally
+  plot(title: "My Notes",
+       fields: {{time {seconds 0 10}} ; time's axis is 10 seconds
+                {dur time .5}         ; dur field uses time's axis
+                {key {keynum 60 96}}  ; key is keynum between 60 to 90
+                {amp unit}            ; amp is 0 to 1
+                {chan {0 15}}},       ; chan is 0 to 15
+       xaxis: {time dur},             ; time and dur on X
+       yaxis: "key",                  ; key numbers on Y
+       layer: poi,                    ; one layer of data
+       style: "hbox"                  ; display as horizontal boxes
+       )
+end
+
+; Create an empty plot window, add points by Control-clicking, then
+; get points back from window using plot-data
+
+plot()
+
+variable mydata = plot-data("Untitled Plot")
+
+; Adding points by mouse hook (Control-Option mouseclick)
+
+function myhook (x, y)
+  with spec = fm-spectrum(y, between(1.5, 3.0), 3),
+       keys = spectrum-keys(spec, quant: 1, unique: #t, 
+                            min: y - 17, max: y + 17)
+  loop with points = {} 
+    for k in keys
+    set points &= list(x, k) 
+    finally points 
+  end
+end
+
+; myhook(.1,60)
+
+plot-hook("my fm chords", myhook)
+
+plot(title: "my fm chords", xaxis: {0 10}, yaxis: {0 127})
+
+; Plot a distribution and its histogram in the same window
+
+begin with maxh = 0,
+           hist = make-list(100, 0),
+           rans = {}, bars = {}
+  loop for x from 0 below 100
+    for y = floor( (random(100) + random(100)) * .5)
+    set rans ^= list(x, y)
+    set hist[y] += 1
+  end 
+  
+  set maxh = apply(max, hist)
+
+  loop for y in hist for x from 0
+    if (y > 0) 
+      set bars ^= list(x, (y / maxh) * 100)
+    end
+  end
+
+  plot(title: "Distribution and histogram",
+       x-axis: :percentage,
+       y-axis: :percentage,
+       layer: rans, style: :point,
+       layer: bars, style: :impulse)
+end
+
+; Plot a "sampled sine wave"
+
+begin with wave = {}, samp = {}
+
+  loop for x from 0 to 1 by .01
+    for r = (2 * pi * x)
+    set wave ^= list(r, sin(r))
+  end
+
+  loop for x from 0 to 1 by .05
+    for r = (2 * pi * x)
+    set samp ^= list(r, sin(r))
+  end
+
+  plot(x-axis: list( 0, ( 2 * pi), ( pi / 2), 2),
+       y-axis: {-1 1 .5},
+       layer: wave, style: :line,
+       layer: samp, style: :vlineandpoint)
+end
+
+; Michael Klingbeil's stretched harmonics example
+
+begin
+
+function arpeggiate-exprhy(keynums, offset, duration, rate, midpoint-frac,
+                           amplow, amphi, legato, bass-legato,
+                           bass-cutoff, last-legato)
+  with segn = length(keynums),
+       lastn = segn - 1,
+       midpoint = floor(segn * midpoint-frac),
+       ;; rhythms below midpoint follow one curve, above another.
+       rhyts = append(segs(midpoint, (midpoint-frac * duration), 1, rate),
+                       segs((segn - midpoint),
+                            ((1 - midpoint-frac) * duration),
+			                            1 ,
+                             (1 / rate))),
+       lastn = segn - 1,
+       data = {}
+ 
+  loop with time = 0
+    for i from 0
+    for k in keynums
+    for d in rhyts
+    for r = #?((k < bass-cutoff),
+               bass-legato,
+               #?((i = lastn),
+                  (last-legato * d),
+                  (legato * d)))
+    for a = between(0.45, 0.5)
+    set data &= list(offset + time,
+                     k,
+                     r,
+                     a),
+     	  time += d
+  end
+  data
+end
+
+function distort-harmonics(fund, distort)
+  loop with data = {}
+    for h from 1 below floor(25.0 / distort) 
+    if (odds(0.9 * distort))
+      set data &= keynum(fund * expt(h , distort))
+    end
+  finally data
+  end
+end
+
+function arpa-harmonic (fundnote, dur, gap)
+  ;; spawn overlapping arpeggios with mean duration of dur and mean
+  ;; gap between arpeggio starts of gap seconds. each arpeggio is
+  ;; upward with the general direction of arpeggio starting notes
+  ;; moving downward
+  with result = {}
+
+  function sorter (a,b) (first(a) < first(b)) end
+
+  loop with fund = hertz(fundnote), time = 0
+    for distort from 0.7 below 1.05 by 0.05
+    for notes = distort-harmonics(fund, distort)
+    for arpa = arpeggiate-exprhy(notes,
+                                 time,
+                                 vary(dur, 0.1) * distort,
+                                 between(4.0, 0.25),
+                                 between(0.3, 0.6),
+                                 0.3,  ; amplow
+                                 0.8,  ; amphi
+                                 (dur * distort * 0.7), ; bass legato
+                                 2.0,   ; legato 
+                                 59,    ; bass cutoff
+                                 1.0)
+    set result = sort!(append(result, arpa), sorter),
+     	time += vary(gap, 0.4)
+    end
+  result
+end 
+
+; Now create two layers of harmonically generated notes
+
+plot(title: "Arpa Harmonic",
+     style: :hbox,
+     fields: {{start {seconds 0 40}}
+              {keyn keynum}
+              {dur start}
+              {amp unit}},
+     layer: arpa-harmonic("g1", 7.0, 5.0),
+     layer: arpa-harmonic("g1", 7.0, 5.0)
+     )
+
+end

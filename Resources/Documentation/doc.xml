@@ -1,0 +1,101 @@
+<documentation>
+
+  <menu name="Reference">
+    <item name="Common Music" file="cm.html" url="http://commonmusic.sourceforge.net/cm/res/doc/cm.html"/>
+    <item name="Sal" file="cm.html" url="http://commonmusic.sourceforge.net/cm/res/doc/cm.html#sal"/>
+    <item name="CLM" url="http://ccrma.stanford.edu/software/snd/snd/sndclm.html"/>
+    <item name="S7" url="https://ccrma.stanford.edu/software/snd/snd/s7.html"/>
+    <item name="Fomus" url="http://fomus.sourceforge.net/doc.html/Reference.html#Reference"/>
+    <item name="Scheme" url="http://schemers.org/Documents/Standards/R5RS/HTML/"/>
+    <item name="General Midi" file="gm.html" url="$DOCDIR:/gm.html"/>
+    <item name="Code Editor" file="editor.html" url="$DOCDIR:/editor.html"/>
+  </menu>
+
+  <menu name="Sal Examples">
+    <item name="Reich" file="reich.sal"/>
+    <item name="Midi Output" file="midioutput.sal"/>
+    <item name="Open Sound Control" file="osc.sal"/>
+    <item name="Ghosts" file="ghosts.sal"/>
+    <item name="Gestures" file="gestures.sal"/>
+    <item name="Continuum (Ligeti)" file="continuum.sal"/>
+    <item name="Mapping" file="mapping.sal"/>
+    <item name="Interpolation" file="interpolation.sal"/>
+    <item name="Patterns (1)" file="patterns1.sal"/>	       
+    <item name="Patterns (2)" file="patterns2.sal"/>
+    <item name="Jazz Improvisor" file="jazz.sal"/>
+    <item name="Markov (1)" file="markov1.sal"/>     
+    <item name="Markov (2)" file="markov2.sal"/>
+    <item name="Stephen Foster" file="foster.sal"/>
+    <item name="Harmonic Series" file="harmonics.sal"/>
+    <item name="FM Composition" file="fm.sal"/>
+    <item name="Csound" file="csound.sal"/>
+    <item name="Midi Input" file="midiinput.sal"/>
+    <item name="Plotting" file="plot.sal"/>
+    <item name="CLM" file="clm.sal"/>
+    <item name="Fomus" file="fomus.sal"/>
+    <item name="SuperCollider" file="supercollider.sal"/>
+    <item name="Metronomes" file="metronomes.sal"/>
+    <item name="Live Coding" file="livecoding.sal"/>
+  </menu>
+
+  <menu name="Sal Tutorials">
+    <item name="Quick Tour" file="quicktour.sal"/>
+    <item name="Expressions" file="expr.sal"/>
+    <item name="Function Calls" file="funcall.sal"/>
+    <item name="Lists" file="lists.sal"/>
+    <item name="Defining Variables" file="variables.sal"/>
+    <item name="Defining Functions" file="functions.sal"/>
+    <item name="Loop" file="loop.sal"/>
+    <item name="Processes" file="processes.sal"/>
+    <item name="Files" file="files.sal"/>
+  </menu>
+
+  <menu name="Scheme Examples">
+    <item name="Reich" file="reich.scm"/>
+    <item name="Midi Output" file="midioutput.scm"/>
+    <item name="Open Sound Control" file="osc.scm"/>
+    <item name="Ghosts" file="ghosts.scm"/>
+    <item name="Gestures" file="gestures.scm"/>
+    <item name="Continuum (Ligeti)" file="continuum.scm"/>
+    <item name="Mapping" file="mapping.scm"/>
+    <item name="Interpolation" file="interpolation.scm"/>
+    <item name="Patterns (1)" file="patterns1.scm"/>	       
+    <item name="Patterns (2)" file="patterns2.scm"/>
+    <item name="Jazz Improvisor" file="jazz.scm"/>
+    <item name="Markov (1)" file="markov1.scm"/>     
+    <item name="Markov (2)" file="markov2.scm"/>
+    <item name="Stephen Foster" file="foster.scm"/>
+    <item name="Harmonic Series" file="harmonics.scm"/>
+    <item name="FM Composition" file="fm.scm"/>
+    <item name="Csound" file="csound.scm"/>
+    <item name="Midi Input" file="midiinput.scm"/>
+    <item name="Plotting" file="plot.scm"/>
+    <item name="CLM" file="clm.scm"/>
+    <item name="Fomus" file="fomus.scm"/>
+    <item name="SuperCollider" file="supercollider.scm"/>
+    <item name="Metronomes" file="metronomes.scm"/>
+    <item name="Live Coding" file="livecoding.scm"/>
+  </menu>
+
+  <menu name="Scheme Tutorials">
+    <item name="Quick Tour" file="quicktour.scm"/>
+    <item name="Expressions" file="expr.scm"/>
+    <item name="Function Calls" file="funcall.scm"/>
+    <item name="Lists" file="lists.scm"/>
+    <item name="Defining Variables" file="variables.scm"/>
+    <item name="Defining Functions" file="functions.scm"/>
+    <item name="Loop" file="loop.scm"/>
+    <item name="Processes" file="processes.scm"/>
+    <item name="Files" file="files.scm"/>
+  </menu>
+
+  <menu name="Scheme Extras">
+    <item name="Acoustic Dissonance" file="acoustic-dissonance.scm"/>    
+  </menu>
+
+  <menu name="Web Sites">
+    <item name="Common Music" url="http://commonmusic.sourceforge.net/"/>
+    <item name="Fomus" url="http://fomus.sourceforge.net/"/>
+  </menu>
+
+</documentation>

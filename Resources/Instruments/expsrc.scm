@@ -1,0 +1,40 @@
+(define* (clm-expsrc beg dur input-file exp-ratio src-ratio amp rev start-in-file)
+  (let ((stf (floor (* (or start-in-file 0) (srate input-file))))
+	(two-chans (= (channels input-file) 2 (channels *output*)))
+	(revit (and *reverb* rev)))
+    (let ((st (seconds->samples beg))
+	  (exA (make-granulate (make-readin input-file :channel 0 :start stf) :expansion exp-ratio))
+	  (exB (and two-chans (make-granulate (make-readin input-file :channel 1 :start stf) :expansion exp-ratio))))
+      (let ((srcA (make-src :srate src-ratio
+			    :input (lambda (dir) (granulate exA))))
+	    (srcB (and two-chans (make-src :srate src-ratio
+					   :input (lambda (dir) (granulate exB)))))
+	    (rev-amp (if revit (if two-chans (* rev .5) rev) 0.0))
+	    (nd (seconds->samples (+ beg dur))))
+	(if revit
+	    (let ((valA 0.0)
+		  (valB 0.0))
+	      (if two-chans
+		  (do ((i st (+ i 1))) 
+		      ((= i nd))
+		    (set! valA (* amp (src srcA)))
+		    (set! valB (* amp (src srcB)))
+		    (outa i valA)
+		    (outb i valB)
+		    (outa i (* rev-amp (+ valA valB)) *reverb*))
+		  (do ((i st (+ i 1))) 
+		      ((= i nd))
+		    (set! valA (* amp (src srcA)))
+		    (outa i valA)
+		    (outa i (* rev-amp valA) *reverb*))))
+	    (if two-chans
+		(do ((i st (+ i 1))) 
+		    ((= i nd))
+		  (outa i (* amp (src srcA)))
+		  (outb i (* amp (src srcB))))
+		(do ((i st (+ i 1))) 
+		    ((= i nd))
+		  (outa i (* amp (src srcA))))))))))
+
+;;; (with-sound () (clm-expsrc 0 2.5 "oboe.snd" 2.0 1.0 1.0))
+

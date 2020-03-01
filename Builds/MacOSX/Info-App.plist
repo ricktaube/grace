@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+  <dict>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeExtensions</key>
+        <array>
+          <string>scm</string>
+          <string>lisp</string>
+          <string>ins</string>
+          <string>clm</string>
+        </array>
+        <key>CFBundleTypeIconFile</key>
+        <string>Grace.icns</string>
+        <key>CFBundleTypeName</key>
+        <string>Lisp source file</string>
+        <key>CFBundleTypeOSTypes</key>
+        <array>
+          <string>TEXT</string>
+          <string>utxt</string>
+        </array>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+      </dict>
+      <dict>
+        <key>CFBundleTypeExtensions</key>
+        <array>
+          <string>sal</string>
+        </array>
+        <key>CFBundleTypeIconFile</key>
+        <string>Grace.icns</string>
+        <key>CFBundleTypeName</key>
+        <string>SAL source file</string>
+        <key>CFBundleTypeOSTypes</key>
+        <array>
+          <string>TEXT</string>
+          <string>utxt</string>
+        </array>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+      </dict>
+    </array>
+    <key>CFBundleIconFile</key>
+    <string>Grace.icns</string>
+    <key>CFBundleExecutable</key>
+    <string>${EXECUTABLE_NAME}</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.commonmusic.grace</string>
+    <key>CFBundleName</key>
+    <string>Grace</string>
+    <key>CFBundleDisplayName</key>
+    <string>Grace</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleShortVersionString</key>
+    <string>3.10.3</string>
+    <key>CFBundleVersion</key>
+    <string>3.10.3</string>
+    <key>NSHumanReadableCopyright</key>
+    <string></string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+  </dict>
+</plist>

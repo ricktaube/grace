@@ -1,0 +1,62 @@
+;
+;; Output to Files
+; 
+
+; To run examples put the cursor at the end of each expression and
+; press Command-Return. Look in the console window for any output.
+
+; Use 'file' to generate musical output to different kinds of files:
+
+; file "name.ext" (&key ...)
+; ...
+; end
+
+; The type of file created depends on file's extension (.ext):
+
+; .wav, .aiff, .snd        CLM audio file
+; .mid                     Midi file
+; .ly, .fms, .xml          Fomus file
+; .sco                     Csound score file
+
+; 'file' generates the specified kind of file in non-real (faster than
+; real) time. Inside the body you call functions (i.e. instruments or
+; 'send' methods) to generate sound output. The time stamps you pass
+; to these functions should be the true score times of the events. You
+; can specify events out of order and use loops to perform iteration.
+; Here are a few examples.
+
+; A CLM audio file
+
+load("v.scm")
+
+file "test.wav" (srate: 44100, channels: 2)
+  loop for t to 4 by .25
+    fm-violin(t, .4, hertz(between(48, 84)), .5)
+  end
+end
+
+; A midi file
+
+file "test.mid" ()
+  loop for t to 4 by .25
+    mp:midi(t, 1, between(48, 84), .5)
+  end
+end
+
+; A lilypond file (must have Fomus installed)
+
+file "test.ly" (parts: {{:id "pno" :inst "piano"}})
+  loop for t to 4 by .25
+    fms:note(t, .25, between(48, 84), "pno")
+  end
+end
+
+; A csound score file
+
+file "testsco.sco" ()
+  loop for t to 4 by .25
+    cs:i(1, t, .25, hertz(between(48, 84)), .5)
+  end
+end
+
+

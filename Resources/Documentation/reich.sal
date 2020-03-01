@@ -1,0 +1,39 @@
+;
+;; Steve Reich's Piano Phase
+;
+
+; To run code put your cursor after each expression and press
+; Command-Return, then check the console window for any output.
+
+process piano-phase (endtime, keys, rate)
+  with pat = make-cycle(keys)
+  while (elapsed() < endtime)
+  mp:midi(key: next(pat), dur: rate)
+  wait rate
+end
+
+; Play the example in real time out your midi port
+
+begin
+  with keynums = keynum({e4 fs4 b4 cs5 d5 fs4 e4 cs5 b4 fs4 d5 cs5}),
+       stoptime = 20
+
+  sprout(list(piano-phase(stoptime, keynums, .167),
+              piano-phase(stoptime, keynums, .170)))
+end
+
+; You can generate output to a file as long as no real-time processes
+; are currently running. This example will create a midifile called
+; reich.mid in your current working directory.
+
+begin
+  with keynums = keynum({e4 fs4 b4 cs5 d5 fs4 e4 cs5 b4 fs4 d5 cs5}),
+       stoptime = 20,
+       midifile = "reich.mid"
+
+  sprout(list(piano-phase(stoptime, keynums, .167),
+              piano-phase(stoptime, keynums, .170)),
+         midifile)
+end
+
+play("reich.mid")
