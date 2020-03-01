@@ -20,7 +20,7 @@
 // #include "xen.h"
 // #include "clm2xen.h"
 
-#include "../sndlib/sndlib.h"
+#include "sndlib.h"
 #include "s7.h"
 #include "clm.h"
 #include "xen.h"
@@ -33,7 +33,7 @@
 #include "SchemeSources.h"
 #include "Scheme.h"
 #include "Console.h"
-#include "SndLib.h"
+#include "SndLibLoad.h"
 #include "Preferences.h"
 #include "CodeEditor.h"
 #include "Instruments.h"

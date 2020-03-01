@@ -19,7 +19,7 @@
 #include "Midi.h"
 #include "Csound.h"
 #include "CmSupport.h"
-#include "SndLib.h"
+#include "SndLibLoad.h"
 #include "Scheme.h"
 
 #ifdef WITH_FOMUS
@@ -198,10 +198,9 @@ XProcessNode::XProcessNode(double qtime, s7_pointer proc, int qid, double startB
     start(qtime),
     elapsed (0.0),
     schemeproc(proc),
+    protect(0),
     metroIndex(metroIndex),
-    beatState(startBeat),
-    protect(0)
-{
+    beatState(startBeat) {
   userid = qid;
   time = qtime;
 }

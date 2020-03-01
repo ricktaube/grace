@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" jucerVersion="5.4.5"
-              version="3.10.3" headerPath="../../sndlib" defines="HAVE_SCHEME=1">
+              version="3.10.3" headerPath="../../../sndlib" defines="HAVE_SCHEME=1">
   <MAINGROUP id="uY8Jva" name="Grace">
     <GROUP id="{821C7801-B231-6F50-D189-87D7073B543D}" name="Icons">
       <FILE id="GlOMaa" name="Grace.icns" compile="0" resource="1" file="Resources/Icons/Grace.icns"
@@ -72,8 +72,8 @@
             file="Source/SchemeSources.cpp"/>
       <FILE id="uNwTRZ" name="SchemeSources.h" compile="0" resource="0" file="Source/SchemeSources.h"/>
       <FILE id="wN5tcG" name="Skin.h" compile="0" resource="0" file="Source/Skin.h"/>
-      <FILE id="RRtTSu" name="SndLib.cpp" compile="1" resource="0" file="Source/SndLib.cpp"/>
-      <FILE id="mi2VKP" name="SndLib.h" compile="0" resource="0" file="Source/SndLib.h"/>
+      <FILE id="RRtTSu" name="SndLibLoad.cpp" compile="1" resource="0" file="Source/SndLibLoad.cpp"/>
+      <FILE id="mi2VKP" name="SndLibLoad.h" compile="0" resource="0" file="Source/SndLibLoad.h"/>
       <FILE id="hHpqL0" name="SndLibBridge.cpp" compile="1" resource="0"
             file="Source/SndLibBridge.cpp"/>
       <FILE id="ULxkX1" name="SndLibBridge.h" compile="0" resource="0" file="Source/SndLibBridge.h"/>
@@ -83,7 +83,7 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" externalLibraries="sndlib" extraLinkerFlags="-L../../sndlib/lib&#10;"
+    <XCODE_MAC targetFolder="Builds/MacOSX" externalLibraries="sndlib" extraLinkerFlags="-L../../../sndlib/lib&#10;"
                customPList="&lt;plist&gt;&#10;&lt;dict&gt;&#10;&#9;&lt;key&gt;CFBundleDocumentTypes&lt;/key&gt;&#10;&#9;&lt;array&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;scm&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;lisp&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;ins&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;clm&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Lisp source file&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;TEXT&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;utxt&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&#9;&lt;dict&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeExtensions&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;sal&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeIconFile&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeName&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;SAL source file&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeOSTypes&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;array&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;TEXT&lt;/string&gt;&#10;&#9;&#9;&#9;&#9;&lt;string&gt;utxt&lt;/string&gt;&#10;&#9;&#9;&#9;&lt;/array&gt;&#10;&#9;&#9;&#9;&lt;key&gt;CFBundleTypeRole&lt;/key&gt;&#10;&#9;&#9;&#9;&lt;string&gt;Editor&lt;/string&gt;&#10;&#9;&#9;&lt;/dict&gt;&#10;&#9;&lt;/array&gt;&#10;&#9;&lt;key&gt;CFBundleIconFile&lt;/key&gt;&#10;&#9;&lt;string&gt;Grace.icns&lt;/string&gt;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
                bundleIdentifier="com.commonmusic.grace">
       <CONFIGURATIONS>

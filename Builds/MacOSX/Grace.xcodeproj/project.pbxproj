@@ -161,9 +161,9 @@
 			isa = PBXBuildFile;
 			fileRef = 6FF5284179ED36CCCFB637AA;
 		};
-		2D746AB9C4630CE79E1000E8 = {
+		6C8116CF035AC8A3921966E1 = {
 			isa = PBXBuildFile;
-			fileRef = DA7E6D1DA86E2ECE1667F616;
+			fileRef = D9EB7196BEB0077F577BD58C;
 		};
 		0898FB882B613848EA75AFF5 = {
 			isa = PBXBuildFile;
@@ -337,13 +337,6 @@
 			path = ../../Source/Enumerations.h;
 			sourceTree = "SOURCE_ROOT";
 		};
-		260BD90644E243A3E8A6780D = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = SndLib.h;
-			path = ../../Source/SndLib.h;
-			sourceTree = "SOURCE_ROOT";
-		};
 		27A558E44A5289AE13EB5E60 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -447,6 +440,13 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = Midi.cpp;
 			path = ../../Source/Midi.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4ECEF1E064DDEE225D7A682D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = SndLibLoad.h;
+			path = ../../Source/SndLibLoad.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		50F462F39B1F996026298C35 = {
@@ -876,11 +876,11 @@
 			path = "Info-App.plist";
 			sourceTree = "SOURCE_ROOT";
 		};
-		DA7E6D1DA86E2ECE1667F616 = {
+		D9EB7196BEB0077F577BD58C = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
-			name = SndLib.cpp;
-			path = ../../Source/SndLib.cpp;
+			name = SndLibLoad.cpp;
+			path = ../../Source/SndLibLoad.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		DD75F219265065D21288C846 = {
@@ -1031,8 +1031,8 @@
 				6FF5284179ED36CCCFB637AA,
 				032FA71557F68A778B8C899B,
 				11CDDD31FA602B2DE5973FF0,
-				DA7E6D1DA86E2ECE1667F616,
-				260BD90644E243A3E8A6780D,
+				D9EB7196BEB0077F577BD58C,
+				4ECEF1E064DDEE225D7A682D,
 				7F2F01A0335B1418571FD35B,
 				EF63B40490989AC5E4160802,
 				818A0067A72D9FCDE3CC12A0,
@@ -1176,14 +1176,14 @@
 					"../../JuceLibraryCode",
 					"/Users/taube/Software/juce/modules",
 					"../../../juce/modules",
-					"../../sndlib",
+					"../../../sndlib",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-App.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				OTHER_LDFLAGS = "-lsndlib -L../../sndlib/lib";
+				OTHER_LDFLAGS = "-lsndlib -L../../../sndlib/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.commonmusic.grace;
 				PRODUCT_NAME = "Grace";
 				USE_HEADERMAP = NO;
@@ -1224,7 +1224,7 @@
 					"../../JuceLibraryCode",
 					"/Users/taube/Software/juce/modules",
 					"../../../juce/modules",
-					"../../sndlib",
+					"../../../sndlib",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-App.plist;
@@ -1232,7 +1232,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				OTHER_LDFLAGS = "-lsndlib -L../../sndlib/lib";
+				OTHER_LDFLAGS = "-lsndlib -L../../../sndlib/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.commonmusic.grace;
 				PRODUCT_NAME = "Grace";
 				USE_HEADERMAP = NO;
@@ -1390,7 +1390,7 @@
 				9146640250FE36A623E54EF7,
 				F68C24A54B198A0192F64365,
 				9CC1DED7B983843D9566DB1D,
-				2D746AB9C4630CE79E1000E8,
+				6C8116CF035AC8A3921966E1,
 				0898FB882B613848EA75AFF5,
 				F6565693D99F135F85448DB9,
 				D831BBC0B456AFF100CABEE9,

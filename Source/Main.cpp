@@ -32,7 +32,7 @@
 #include "Fomus.h"
 #endif
 #include "Help.h"
-#include "SndLib.h"
+#include "SndLibLoad.h"
 
 extern Console* globalConsole;
 

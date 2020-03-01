@@ -26,7 +26,7 @@
 #include "Csound.h"
 #include "PlotWindow.h"
 #include "CodeEditor.h"
-#include "SndLib.h"
+#include "SndLibLoad.h"
 #include "OpenSoundControl.h"
 #ifdef WITH_FOMUS
 #include "Fomus.h"

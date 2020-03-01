@@ -17,7 +17,7 @@
 #include "CmSupport.h"
 #include "Midi.h"
 #include "Csound.h"
-#include "SndLib.h"
+#include "SndLibLoad.h"
 #include "Console.h"
 #include "Syntax.h"
 #include "Plot.h"
