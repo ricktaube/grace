@@ -31,9 +31,9 @@ void cm_play(char* str);
 void cm_load(char* path);
 void cm_edit(char* path);
 
-#ifdef _MSC_VER
-int round(double n);
-#endif
+//#ifdef _MSC_VER
+//int round(double n);
+//#endif
 
 double cm_rescale(double x, double x1, double x2, double y1, double y2, double b1) ;
 int cm_discrete(double x, double x1, double x2, int y1, int y2, double b=1.0);

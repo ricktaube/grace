@@ -159,13 +159,15 @@ void mus_error_to_grace(int type, char *msg)
 
 void loadCode(juce::String file, const char* code, int size, bool trace)
 {
-  if (trace)
-    Console::getInstance()->printOutput(file + "\n");
-  char str [size + 7 + 1 + 1]; // last 1 is for adding null char
-  strcpy(str, "(begin ");
-  strcat(str, code);
-  strcat(str, ")");
-  s7_eval_c_string(s7, str);
+    if (trace)
+        Console::getInstance()->printOutput(file + "\n");
+    //  char str [codesize + 7 + 1 + 1]; // last 1 is for adding null char
+    //  strcpy(str, "(begin ");
+    //  strcat(str, code);
+    //  strcat(str, ")");
+    juce::String str = "(begin ";
+    str << code << ")";
+    s7_eval_c_string(s7, str.toUTF8());
 }
 
 bool SchemeThread::init()

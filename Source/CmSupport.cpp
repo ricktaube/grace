@@ -23,12 +23,12 @@
 #include "Plot.h"
 #include "PlotWindow.h"
 #include "Cells.h"
-#ifdef _MSC_VER
-#define strdup _strdup
-#define jn _jn
-double log2(double n) {return log(n)/log(2.0);}
-int round(double n) {return (int)(n+.5);}
-#endif
+//#ifdef _MSC_VER
+//#define strdup _strdup
+//#define jn _jn
+//double log2(double n) {return log(n)/log(2.0);}
+//int round(double n) {return (int)(n+.5);}
+//#endif
 #ifdef WITH_FOMUS
 #include "Fomus.h"
 #endif
