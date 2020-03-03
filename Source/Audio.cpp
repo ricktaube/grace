@@ -236,10 +236,10 @@ void AudioManager::openAudioSettings()
   // (these are handled by the Midi Manger)
   juce::AudioDeviceSelectorComponent* comp
     = new juce::AudioDeviceSelectorComponent(audioDeviceManager, 0, 256, 0, 256, false, false, true, false);
-  comp->setSize(500, 270);
+  comp->setSize(500, 600);
   juce::DialogWindow::LaunchOptions dw;
   dw.useNativeTitleBar = true;
-  dw.resizable = false;
+  dw.resizable = true;
   dw.dialogTitle = "Audio Settings";
   dw.dialogBackgroundColour = ColorThemeIDs::getWindowBackgroundColor();
   dw.content.setOwned(comp);
