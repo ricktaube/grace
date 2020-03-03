@@ -20,7 +20,7 @@ $ make
 Linux:
 ```bash
 $ cd sndlib
-$ premake4 --with-g++ --with-jack
+$ premake4 --with-g++
 $ make
 ```
 

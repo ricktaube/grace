@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" jucerVersion="5.4.5"
+<JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" jucerVersion="5.4.7"
               version="3.10.3" headerPath="../../../sndlib" defines="HAVE_SCHEME=1">
   <MAINGROUP id="uY8Jva" name="Grace">
     <GROUP id="{821C7801-B231-6F50-D189-87D7073B543D}" name="Icons">
@@ -166,6 +166,7 @@
   <LIVE_SETTINGS>
     <OSX/>
     <WINDOWS/>
+    <LINUX/>
   </LIVE_SETTINGS>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_PLUGINHOST_AU="1" JUCE_USE_MP3AUDIOFORMAT="1"/>
 </JUCERPROJECT>
