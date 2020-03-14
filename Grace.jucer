@@ -9,6 +9,73 @@
       <FILE id="EfL8io" name="Grace.ico" compile="0" resource="1" file="Resources/Icons/Grace.ico"
             xcodeResource="0"/>
     </GROUP>
+    <GROUP id="{B74EEB5A-0DCE-97CA-71D4-27D6831047B3}" name="SoundFonts">
+      <GROUP id="{331BC22A-600F-D13F-B0A1-400B39A1C0B9}" name="A112-Piano1d-2">
+        <FILE id="oqcbVg" name="3f-021-A0.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-021-A0.wav"
+              xcodeResource="1"/>
+        <FILE id="HIWcU1" name="3f-024-C1.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-024-C1.wav"
+              xcodeResource="1"/>
+        <FILE id="ZqAUm3" name="3f-027-D#1.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-027-D#1.wav"
+              xcodeResource="1"/>
+        <FILE id="QIlwph" name="3f-030-F#1.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-030-F#1.wav"
+              xcodeResource="1"/>
+        <FILE id="sMCZRG" name="3f-033-A1.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-033-A1.wav"
+              xcodeResource="1"/>
+        <FILE id="wbnQ1A" name="3f-036-C2.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-036-C2.wav"
+              xcodeResource="1"/>
+        <FILE id="fRHKEG" name="3f-039-D#2.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-039-D#2.wav"
+              xcodeResource="1"/>
+        <FILE id="TQyhBF" name="3f-042-F#2.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-042-F#2.wav"
+              xcodeResource="1"/>
+        <FILE id="LIJVl8" name="3f-045-A2.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-045-A2.wav"
+              xcodeResource="1"/>
+        <FILE id="RQjg4B" name="3f-048-C3.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-048-C3.wav"
+              xcodeResource="1"/>
+        <FILE id="wrMm54" name="3f-051-D#3.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-051-D#3.wav"
+              xcodeResource="1"/>
+        <FILE id="JVoNab" name="3f-054-F#3.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-054-F#3.wav"
+              xcodeResource="1"/>
+        <FILE id="K2ttsc" name="3f-057-A3.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-057-A3.wav"
+              xcodeResource="1"/>
+        <FILE id="KIVZI4" name="3f-060-C4.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-060-C4.wav"
+              xcodeResource="1"/>
+        <FILE id="pqA1pg" name="3f-063-D#4.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-063-D#4.wav"
+              xcodeResource="1"/>
+        <FILE id="RKW7iI" name="3f-066-F#4.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-066-F#4.wav"
+              xcodeResource="1"/>
+        <FILE id="Fh1a9H" name="3f-069-A4.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-069-A4.wav"
+              xcodeResource="1"/>
+        <FILE id="gTh3U9" name="3f-072-C5.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-072-C5.wav"
+              xcodeResource="1"/>
+        <FILE id="uICJfr" name="3f-075-D#5.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-075-D#5.wav"
+              xcodeResource="1"/>
+        <FILE id="z1Vvm2" name="3f-078-F#5.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-078-F#5.wav"
+              xcodeResource="1"/>
+        <FILE id="I8sYUU" name="3f-081-A5.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-081-A5.wav"
+              xcodeResource="1"/>
+        <FILE id="t2D5UQ" name="3f-084-C6.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-084-C6.wav"
+              xcodeResource="1"/>
+        <FILE id="w098VA" name="3f-087-D#6.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-087-D#6.wav"
+              xcodeResource="1"/>
+        <FILE id="QRMZev" name="3f-090-F#6.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-090-F#6.wav"
+              xcodeResource="1"/>
+        <FILE id="CiVgU6" name="3f-093-A6.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-093-A6.wav"
+              xcodeResource="1"/>
+        <FILE id="xMnfN4" name="3f-096-C7.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-096-C7.wav"
+              xcodeResource="1"/>
+        <FILE id="vMSB45" name="3f-099-D#7.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-099-D#7.wav"
+              xcodeResource="1"/>
+        <FILE id="FMomDh" name="3f-102-F#7.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-102-F#7.wav"
+              xcodeResource="1"/>
+        <FILE id="d434EC" name="3f-105-A7.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-105-A7.wav"
+              xcodeResource="1"/>
+        <FILE id="IjBDYx" name="3f-108-C8.wav" compile="0" resource="0" file="Resources/SoundFonts/A112-Piano1d-2/3f-108-C8.wav"
+              xcodeResource="1"/>
+        <FILE id="tgoa8W" name="G800-A112-Piano1d-2-3f.sfz" compile="0" resource="0"
+              file="Resources/SoundFonts/A112-Piano1d-2/G800-A112-Piano1d-2-3f.sfz"
+              xcodeResource="1"/>
+      </GROUP>
+    </GROUP>
     <GROUP id="{BEA1698D-B00C-8831-1932-6F67B5C7CD22}" name="Source">
       <FILE id="TutcLW" name="AppConfig.h" compile="0" resource="0" file="Source/AppConfig.h"/>
       <FILE id="Bfo4or" name="Audio.cpp" compile="1" resource="0" file="Source/Audio.cpp"/>
@@ -71,6 +138,10 @@
       <FILE id="l1zjgE" name="SchemeSources.cpp" compile="1" resource="0"
             file="Source/SchemeSources.cpp"/>
       <FILE id="uNwTRZ" name="SchemeSources.h" compile="0" resource="0" file="Source/SchemeSources.h"/>
+      <FILE id="QldhcT" name="SFZeroAudioProcessor.cpp" compile="1" resource="0"
+            file="../harmonia3/Sources/SFZeroAudioProcessor.cpp"/>
+      <FILE id="TEJfDk" name="SFZeroAudioProcessor.h" compile="0" resource="0"
+            file="../harmonia3/Sources/SFZeroAudioProcessor.h"/>
       <FILE id="wN5tcG" name="Skin.h" compile="0" resource="0" file="Source/Skin.h"/>
       <FILE id="RRtTSu" name="SndLibLoad.cpp" compile="1" resource="0" file="Source/SndLibLoad.cpp"/>
       <FILE id="mi2VKP" name="SndLibLoad.h" compile="0" resource="0" file="Source/SndLibLoad.h"/>
@@ -103,6 +174,7 @@
         <MODULEPATH id="juce_gui_extra" path="../juce/modules"/>
         <MODULEPATH id="juce_osc" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_utils" path="../juce/modules"/>
+        <MODULEPATH id="SFZero" path="Source"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <VS2019 targetFolder="Builds/VisualStudio2019" externalLibraries="sndlib.lib">
@@ -125,6 +197,7 @@
         <MODULEPATH id="juce_audio_formats" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../juce/modules"/>
+        <MODULEPATH id="SFZero" path="Source"/>
       </MODULEPATHS>
     </VS2019>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" externalLibraries="sndlib"
@@ -146,6 +219,7 @@
         <MODULEPATH id="juce_audio_formats" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../juce/modules"/>
+        <MODULEPATH id="SFZero" path="Source"/>
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
@@ -162,6 +236,7 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
     <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="SFZero" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
   </MODULES>
   <LIVE_SETTINGS>
     <OSX/>

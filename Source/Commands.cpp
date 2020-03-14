@@ -181,7 +181,6 @@ void Grace::getAllCommands(juce::Array<juce::CommandID>& commands)
 
       // Audio
       CommandIDs::AudioSettings,
-      CommandIDs::AudioSynthSettings,
       CommandIDs::MidiDeviceSettings,
       CommandIDs::SndLibSrate + 0,
       CommandIDs::SndLibSrate + 1,
@@ -649,7 +648,6 @@ juce::PopupMenu Grace::GraceMenuBarModel::getMenuForIndex(int idx, const juce::S
     }
     menu.addSeparator();
     menu.addCommandItem(m, CommandIDs::AudioSettings);
-    menu.addCommandItem(m, CommandIDs::AudioSynthSettings);
     menu.addCommandItem(m, CommandIDs::MidiOutFileSettings);
   }
   else if (name == "Eval")
@@ -1210,11 +1208,6 @@ void Grace::getCommandInfo(const juce::CommandID id, juce::ApplicationCommandInf
   case CommandIDs::AudioSettings:
     info.shortName = "Audio Settings...";
     break;
-      // HKT FIXME2
-  case CommandIDs::AudioSynthSettings:
-    info.shortName = "Synth Settings...";
-      info.setActive(true);//AudioManager::getInstance()->internalSynth ? true : false);
-    break;
   case CommandIDs::MidiDeviceSettings:
     info.shortName = "MIDI Connections...";
     info.setActive(true);
@@ -1683,9 +1676,6 @@ bool Grace::perform(const juce::ApplicationCommandTarget::InvocationInfo& info)
     break;
   case CommandIDs::AudioSettings:
     AudioManager::getInstance()->openAudioSettings();
-    break;
-  case CommandIDs::AudioSynthSettings:
-    AudioManager::getInstance()->openSynthSettings();
     break;
   case CommandIDs::MidiDeviceSettings:
     MidiOutPort::getInstance()->openDeviceSettings();

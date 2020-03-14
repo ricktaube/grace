@@ -26,7 +26,41 @@ juce_ImplementSingleton(AudioManager)
 
 AudioManager::AudioManager() {
   audioDeviceManager.initialise(2, 2, 0, true);
-#ifdef JUCE_MAC
+
+  #ifdef JUCE_MAC
+  loadMacDLSMusicDevice();
+  #endif
+  
+//  // Call the audio manager's addMidiInputCallback() method
+//  // to add this component as the callback.
+//  audioManager.addMidiInputCallback("", this);
+//  
+//  // Connect the synth player to the host's audio manager using its
+//  // addAudioCallback() method.
+// audioManager.addAudioCallback(&sfZeroPlayer);
+//  // Create a new sfzero::SFZeroAudioProcessor and assign it to
+//  // the sfZeroAudioProcessor unique_ptr.
+//  sfZeroAudioProcessor.reset(new sfzero::SFZeroAudioProcessor());
+//  // Add the sfZeroAudioProcessor to the sfzero player.
+//  sfZeroPlayer.setProcessor(sfZeroAudioProcessor.get());
+//  // Call loadSoundFont() to load the our sound font file "G800-A112-Piano1d-2-3f.sfz".
+//  // This is stored in the the app's resource directory. See: MainApplication::getRuntimeResourceDirectory()
+//  auto soundFont = MainApplication::getApp().getRuntimeResourceDirectory().getChildFile("G800-A112-Piano1d-2-3f.sfz");
+//  loadSoundFont(soundFont);
+
+}
+
+AudioManager::~AudioManager()
+{
+  // Flush any midi input
+  synthPlayer.getMidiMessageCollector().reset(1000);
+  audioDeviceManager.removeAudioCallback(&synthPlayer);
+  synthPlayer.setProcessor(0);
+//  audioManager.removeAudioCallback(&sfZeroPlayer);
+//  sfZeroPlayer.setProcessor(nullptr);
+}
+
+bool AudioManager::loadMacDLSMusicDevice() {
   pluginFormatManager.addDefaultFormats();
   juce::OwnedArray<juce::PluginDescription> buf;
   juce::PluginDescription des;
@@ -35,47 +69,30 @@ AudioManager::AudioManager() {
   des.fileOrIdentifier = "AudioUnit:Synths/aumu,dls ,appl";
   auto lambda = [this] (std::unique_ptr<juce::AudioPluginInstance> synth, const juce::String&) {
     if (synth)
-      this->createInternalSynth(std::move(synth));
+      this->createMacDLSMusicDevice(std::move(synth));
     else
       std::cout << "*** Couldn't create internal synth :(\n";
+    return false;
   };
-  pluginFormatManager.createPluginInstanceAsync(des, synthGraph.getSampleRate(), synthGraph.getBlockSize(), lambda);
-#endif
+  pluginFormatManager.createPluginInstanceAsync(des, macDLSMusicDevice.getSampleRate(), macDLSMusicDevice.getBlockSize(), lambda);
+  audioDeviceManager.addAudioCallback(&synthPlayer);
+  synthPlayer.setProcessor(&macDLSMusicDevice);
+  return true;
 }
 
-AudioManager::~AudioManager()
-{
-  deleteInternalSynthEditor();
-  // Flush any midi input
-  synthPlayer.getMidiMessageCollector().reset(1000);
-  audioDeviceManager.removeAudioCallback(&synthPlayer);
-  synthPlayer.setProcessor(0);
-}
-
-void AudioManager::deleteInternalSynthEditor() {
-  // If we have an internal synth delete its editor if it exists.
-  if (synthGraph.getNode(1)) {
-    auto* plug = synthGraph.getNode(1)->getProcessor();
-    if (juce::Component* comp = plug->getActiveEditor()) {
-      comp = comp->getTopLevelComponent();
-      delete comp;
-    }
-  }
-}
-
-bool AudioManager::createInternalSynth(std::unique_ptr<juce::AudioPluginInstance> internalSynth)
+bool AudioManager::createMacDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> internalSynth)
 {
   //std::cout << "*** IN INTERNALSYNTH\n";
   // These have to be hooked up first or the AudioOutput graph node
   // wont allow connections.
-  audioDeviceManager.addAudioCallback(&synthPlayer);
-  synthPlayer.setProcessor(&synthGraph);
+//  audioDeviceManager.addAudioCallback(&synthPlayer);
+//  synthPlayer.setProcessor(&macDLSMusicDevice);
   // Create nodes for the synth's AudioProcessorGraph
   std::unique_ptr<juce::AudioProcessor> midiInputProc (new juce::AudioProcessorGraph::AudioGraphIOProcessor(juce::AudioProcessorGraph::AudioGraphIOProcessor::midiInputNode));
   std::unique_ptr<juce::AudioProcessor> audioOutputNode (new juce::AudioProcessorGraph::AudioGraphIOProcessor(juce::AudioProcessorGraph::AudioGraphIOProcessor::audioOutputNode));
-  auto input = synthGraph.addNode(std::move(midiInputProc));
-  auto synth = synthGraph.addNode(std::move(internalSynth)); // NOTE: internal synth is at node index 1.
-  auto output = synthGraph.addNode(std::move(audioOutputNode));
+  auto input = macDLSMusicDevice.addNode(std::move(midiInputProc));
+  auto synth = macDLSMusicDevice.addNode(std::move(internalSynth)); // NOTE: internal synth is at node index 1.
+  auto output = macDLSMusicDevice.addNode(std::move(audioOutputNode));
   /// require valid pointers for all three nodes or give up.
   bool success = (input && synth && output);
   //std::cout << "***SUCCESS1=" << success << "\n";
@@ -99,13 +116,14 @@ bool AudioManager::createInternalSynth(std::unique_ptr<juce::AudioPluginInstance
     node6.nodeID = output->nodeID;
     node6.channelIndex = 1;
     juce::AudioProcessorGraph::Connection con3 (node5, node6);
-    success = (synthGraph.canConnect(con1) && synthGraph.canConnect(con2) &&
-               synthGraph.canConnect(con3));
+    success = (macDLSMusicDevice.canConnect(con1) &&
+               macDLSMusicDevice.canConnect(con2) &&
+               macDLSMusicDevice.canConnect(con3));
     //std::cout << "***SUCCESS2=" << success << "\n";
     if (success) {
-      synthGraph.addConnection(con1);
-      synthGraph.addConnection(con2);
-      synthGraph.addConnection(con3);
+      macDLSMusicDevice.addConnection(con1);
+      macDLSMusicDevice.addConnection(con2);
+      macDLSMusicDevice.addConnection(con3);
       return true;
     }
     else
@@ -113,85 +131,6 @@ bool AudioManager::createInternalSynth(std::unique_ptr<juce::AudioPluginInstance
   }
   return false;
 }
-
-// ORIGINAL
-//bool AudioManager::createInternalSynth()
-//{
-//#ifdef JUCE_MAC
-//  pluginFormatManager.addDefaultFormats();
-//  juce::OwnedArray<juce::PluginDescription> buf;
-//  juce::String err;
-//  juce::PluginDescription des;
-//
-//  // Create the DLSMusicDevice (see: 'auval -a')
-//  des.pluginFormatName = "AudioUnit";
-//  des.fileOrIdentifier = "AudioUnit:Synths/aumu,dls ,appl";
-//
-//  internalSynth = pluginFormatManager.createPluginInstance(des, synthGraph.getSampleRate(), synthGraph.getBlockSize(), err);
-//  if(!internalSynth)
-//  {
-//    //    juce::AlertWindow::showMessageBox(juce::AlertWindow::WarningIcon, "Couldn't create Internal Synth", err);
-//    std::cout << "\n*** Couldn't create Internal Synth, err='" <<  err << "' **\n";
-//    return false;
-//  }
-//
-//  // These have to be hooked up first or the AudioOutput graph node
-//  // wont allow connections.
-//  audioDeviceManager.addAudioCallback(&synthPlayer);
-//  synthPlayer.setProcessor(&synthGraph);
-//
-//  // Create nodes for the synth's AudioProcessorGraph
-//  juce::AudioProcessorGraph::AudioGraphIOProcessor* midiInputNode = new juce::AudioProcessorGraph::AudioGraphIOProcessor(juce::AudioProcessorGraph::AudioGraphIOProcessor::midiInputNode);
-//  juce::AudioProcessorGraph::AudioGraphIOProcessor* audioOutputNode = new juce::AudioProcessorGraph::AudioGraphIOProcessor(juce::AudioProcessorGraph::AudioGraphIOProcessor::audioOutputNode);
-//  juce::AudioProcessorGraph::Node* N1 = synthGraph.addNode(midiInputNode);
-//  juce::AudioProcessorGraph::Node* N2 = synthGraph.addNode(internalSynth);
-//  juce::AudioProcessorGraph::Node* N3 = synthGraph.addNode(audioOutputNode);
-//  if(!N1 || !N2 || !N3)
-//  {
-//    std::cout << "failed to create N1 N2 or N3\n";
-//    // delete unadded (graph owns added)
-//    if(!N1) delete midiInputNode;
-//    if(!N2) delete internalSynth;
-//    if(!N3) delete audioOutputNode;
-//    internalSynth = 0;
-//    return false;
-//  }
-//
-//  int MCI = juce::AudioProcessorGraph::midiChannelIndex;
-//
-///*
-//    std::cout << "Midi input node id=" << N1->nodeId << "\n";
-//    std::cout << "Internal synth node id=" << N2->nodeId << "\n";
-//    std::cout << "Audio output node id=" << N3->nodeId << "\n";
-//    std::cout << "Internal synth output chans=" << internalSynth->getNumOutputChannels() << "\n";
-//    for (int i = 0; i < internalSynth->getNumOutputChannels(); i++)
-//    std::cout << i << ":" << internalSynth->getOutputChannelName(i) << "\n";
-//    std::cout << "Output node input chans=" << audioOutputNode->getNumInputChannels() << "\n";
-//    for (int i = 0; i < audioOutputNode->getNumInputChannels(); i++)
-//    std::cout << i << ":" << audioOutputNode->getInputChannelName(i) << "\n";
-//    std::cout << "can connect Midi->Synth=" << synthGraph.canConnect(N1->nodeId, MCI, N2->nodeId, MCI) << "\n";
-//    std::cout << "can connect Synth0->Audio0=" << synthGraph.canConnect(N2->nodeId, 0, N3->nodeId, 0) << "\n";
-//    std::cout << "can connect Synth1->Audio1=" << synthGraph.canConnect(N2->nodeId, 1, N3->nodeId, 1) << "\n";
-//*/
-//
-//  if(!synthGraph.canConnect(N1->nodeID, MCI, N2->nodeID, MCI) ||
-//     !synthGraph.canConnect(N2->nodeID, 0, N3->nodeID, 0) ||
-//     !synthGraph.canConnect(N2->nodeID, 1, N3->nodeID, 1))
-//  {
-//    // set to null but dont delete! (already owned by graph)
-//    internalSynth = 0;
-//    return false;
-//  }
-//
-//  synthGraph.addConnection(N1->nodeID, MCI, N2->nodeID, MCI);
-//  synthGraph.addConnection(N2->nodeID, 0, N3->nodeID, 0);
-//  synthGraph.addConnection(N2->nodeID, 1, N3->nodeID, 1);
-//  //  std::cout << "is connected=" << synthGraph.isConnected(N2->nodeId, N3->nodeId) << "\n";
-//  // End AudioProcessorGraph creation
-//#endif
-//  return true;
-//}
-
 
 bool AudioManager::sendMessageToPluginGraph(const juce::MidiMessage &message)
 {
@@ -205,29 +144,6 @@ bool AudioManager::sendMessageToPluginGraph(const juce::MidiMessage &message)
   else
     synthPlayer.getMidiMessageCollector().addMessageToQueue(message);
   return true;
-}
-
-void AudioManager::openSynthSettings()
-{
-  // HKT FIXME this should not run modally!
-  if (synthGraph.getNode(1))
-  {
-    auto* plug = synthGraph.getNode(1)->getProcessor();
-    if (juce::AudioProcessorEditor* comp = plug->createEditorIfNeeded())
-    {
-      juce::DialogWindow::LaunchOptions dw;
-      dw.useNativeTitleBar = true;
-      dw.resizable = false;
-      dw.dialogTitle = "DLSMusicDevice Settings";
-      dw.dialogBackgroundColour = ColorThemeIDs::getWindowBackgroundColor();
-      dw.content.set(comp, false);
-      dw.runModal();
-    }
-//    if (juce::Component* comp = plug->getActiveEditor()) {
-//      comp = comp->getTopLevelComponent();
-//      delete comp;
-//    }
-  }
 }
 
 void AudioManager::openAudioSettings()

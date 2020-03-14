@@ -15,16 +15,26 @@
 #pragma once
 
 #include "Libraries.h"
+#include "SFZeroAudioProcessor.h"
 
 class AudioManager
 {
+    
+  /// The SFZero soundfont synth.
+//  std::unique_ptr<sfzero::SFZeroAudioProcessor> sfZeroAudioProcessor;
+  sfzero::SFZeroAudioProcessor sfZeroAudioProcessor;
+//  /// An audio processor player to play the SFZeroAudioProcessor
+//  AudioProcessorPlayer sfZeroPlayer;
+
   /// Internal synth graph (Mac).
-  juce::AudioProcessorGraph synthGraph;
+  juce::AudioProcessorGraph macDLSMusicDevice;
   /// Internal synth player (Mac).
   juce::AudioProcessorPlayer synthPlayer;
   juce::AudioPluginFormatManager pluginFormatManager;
   /// Creates internal synth for MIDI playback (Mac).
-  bool createInternalSynth(std::unique_ptr<juce::AudioPluginInstance> synth);
+  bool loadMacDLSMusicDevice();
+  /// Creates internal synth for MIDI playback (Mac).
+  bool createMacDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> synth);
   /// Deletes the internal synth's editor if it exists (Mac).
   void deleteInternalSynthEditor();
 

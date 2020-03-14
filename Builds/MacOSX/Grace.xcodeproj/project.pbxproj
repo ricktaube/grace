@@ -65,6 +65,130 @@
 			isa = PBXBuildFile;
 			fileRef = 0A901C25CF52A46DCC7B832A;
 		};
+		912F8402045DCA08C9DEA110 = {
+			isa = PBXBuildFile;
+			fileRef = 0E68FE546117A8DCC33F9E48;
+		};
+		2997CDDD18B93856427C3810 = {
+			isa = PBXBuildFile;
+			fileRef = 9D263DEF8F4CF1CD8EF61E66;
+		};
+		67FB465EC0EDB42E8DCDE7B5 = {
+			isa = PBXBuildFile;
+			fileRef = F19EE070535769FBEE5C7D36;
+		};
+		0665AB7155817EDEBC401A3A = {
+			isa = PBXBuildFile;
+			fileRef = 79D8E970220EF840EE8EFD36;
+		};
+		D0A9DDCE779D0D62D24A9600 = {
+			isa = PBXBuildFile;
+			fileRef = C24B1008BA31C9CD7F08C56F;
+		};
+		81874551ABA06192CFA7FABD = {
+			isa = PBXBuildFile;
+			fileRef = 75EA50C228A01793AD42498F;
+		};
+		3A260968179B3FDA0A79EFDB = {
+			isa = PBXBuildFile;
+			fileRef = F9FAEA1AE7DEEAD5CB83CB96;
+		};
+		5C04892BFABD15381ED06BC2 = {
+			isa = PBXBuildFile;
+			fileRef = 94EE84263380CF2D2E63DEBA;
+		};
+		9C2E323A3CB5FF7A12812A4B = {
+			isa = PBXBuildFile;
+			fileRef = 2F6D7CD51E609B9C142F9085;
+		};
+		7980680BEFD246919B74D755 = {
+			isa = PBXBuildFile;
+			fileRef = 7C730E133FD3A37A2E1E94FD;
+		};
+		960A26398AE95F45828E6016 = {
+			isa = PBXBuildFile;
+			fileRef = 2AC60D3A7032035EAB56628C;
+		};
+		47FF594F55CF3EA04B5696D1 = {
+			isa = PBXBuildFile;
+			fileRef = 83B28AA4E0852D9E13C219E0;
+		};
+		7B6B68211AC46D3C7CD734C1 = {
+			isa = PBXBuildFile;
+			fileRef = 36A1A15292DB5E5F9C176DD2;
+		};
+		011827DFD27841D3DCFE9838 = {
+			isa = PBXBuildFile;
+			fileRef = 89A0603EB1B36AF2F901B6F7;
+		};
+		9DBD4546157CE3BB8A21580C = {
+			isa = PBXBuildFile;
+			fileRef = 8DB8FD165EE6FAF9BB4927CC;
+		};
+		F5D004322F646DD50B734C0A = {
+			isa = PBXBuildFile;
+			fileRef = 547FA5018253198533FBE5D3;
+		};
+		B97008F7C46CB4EE1B7125D2 = {
+			isa = PBXBuildFile;
+			fileRef = 9E6A00B6F476475F2864FB4F;
+		};
+		7D59DBF36C19B396DBCD79CC = {
+			isa = PBXBuildFile;
+			fileRef = C00C93A271ABEE930ED86F07;
+		};
+		E7222DB51BC9F5A4F4DADCA6 = {
+			isa = PBXBuildFile;
+			fileRef = 12615D0C0527E2C05BE062FD;
+		};
+		1538BE4A417C20C2C89224BC = {
+			isa = PBXBuildFile;
+			fileRef = 66D596B07674272D0FCDF72D;
+		};
+		BA25D97FC964524B932E43EC = {
+			isa = PBXBuildFile;
+			fileRef = 24C5DC157B4A23595E9E7639;
+		};
+		F9A0EAEE437ACEFA0FAFDF4A = {
+			isa = PBXBuildFile;
+			fileRef = B6B4D12AAEA978FB1E3F2A7C;
+		};
+		42682A5C785056AD1B945F86 = {
+			isa = PBXBuildFile;
+			fileRef = E70D9E32A76488B304863977;
+		};
+		CDD02C536FEC0B2DB251CC65 = {
+			isa = PBXBuildFile;
+			fileRef = 0A916D86B268A291BD8441AF;
+		};
+		FECC062870C1B85545F6D44E = {
+			isa = PBXBuildFile;
+			fileRef = 4B2243F3C9F60DCCD4355B0D;
+		};
+		D8C7CCF229E50DF3E07DC8AB = {
+			isa = PBXBuildFile;
+			fileRef = 394230AA7C8C0AF0F26E7E04;
+		};
+		5BE6832394BE341ACFA3C581 = {
+			isa = PBXBuildFile;
+			fileRef = 475263AA43276609338D4A8A;
+		};
+		9946288FF27CE583DFE7FF4B = {
+			isa = PBXBuildFile;
+			fileRef = 2752AF4D76E62706A6D5BE78;
+		};
+		D88D57C20B44F09EEC309583 = {
+			isa = PBXBuildFile;
+			fileRef = 1FE0826A0AF8CC2B1B1A6050;
+		};
+		19BA377842A58878A643F1DB = {
+			isa = PBXBuildFile;
+			fileRef = 4C6A62438F3A1024F58E2AB2;
+		};
+		364599C66585CE73DA47EBA2 = {
+			isa = PBXBuildFile;
+			fileRef = F5E6DFB8EF68F435DF4042D7;
+		};
 		C568F6652783F24D5F2B5A40 = {
 			isa = PBXBuildFile;
 			fileRef = B7CAEEA38F961D729C79550D;
@@ -161,6 +285,10 @@
 			isa = PBXBuildFile;
 			fileRef = 6FF5284179ED36CCCFB637AA;
 		};
+		C54B2E32910ADB2013BAF470 = {
+			isa = PBXBuildFile;
+			fileRef = CA54104D57F518CA8B627514;
+		};
 		6C8116CF035AC8A3921966E1 = {
 			isa = PBXBuildFile;
 			fileRef = D9EB7196BEB0077F577BD58C;
@@ -225,6 +353,10 @@
 			isa = PBXBuildFile;
 			fileRef = 8A9747BFCFDB8440497B796A;
 		};
+		45ABA17FDE9BFA4119B44567 = {
+			isa = PBXBuildFile;
+			fileRef = 3D45EFB26E94484E5B2E0078;
+		};
 		0089139468DAC7D8D7C34188 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -274,11 +406,25 @@
 			path = ../../Resources/Icons/Grace.icns;
 			sourceTree = "SOURCE_ROOT";
 		};
+		0A916D86B268A291BD8441AF = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-090-F#6.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-090-F#6.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		0B0E936B8C7208ED8AF6C8EA = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
 			name = Console.h;
 			path = ../../Source/Console.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0E68FE546117A8DCC33F9E48 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-021-A0.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-021-A0.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		0E7A6AD89C47930163E0F46C = {
@@ -316,6 +462,20 @@
 			path = System/Library/Frameworks/AudioToolbox.framework;
 			sourceTree = SDKROOT;
 		};
+		12615D0C0527E2C05BE062FD = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-075-D#5.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-075-D#5.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
+		152572F78B80E34B3323B86A = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = SFZero;
+			path = ../../Source/SFZero;
+			sourceTree = "SOURCE_ROOT";
+		};
 		1CB3763DA9A3870DA62A17F9 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -323,11 +483,32 @@
 			path = ../../JuceLibraryCode/BinaryData.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		1FE0826A0AF8CC2B1B1A6050 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-105-A7.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-105-A7.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		2332E854736732FBDDDEEEB1 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
 			name = Enumerations.h;
 			path = ../../Source/Enumerations.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		24C5DC157B4A23595E9E7639 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-081-A5.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-081-A5.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
+		2752AF4D76E62706A6D5BE78 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-102-F#7.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-102-F#7.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		27A558E44A5289AE13EB5E60 = {
@@ -344,6 +525,13 @@
 			path = ../../Source/Transport.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		2AC60D3A7032035EAB56628C = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-051-D#3.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-051-D#3.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		2B5A7BFBAD8EA532DA066473 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -358,11 +546,25 @@
 			path = System/Library/Frameworks/AudioUnit.framework;
 			sourceTree = SDKROOT;
 		};
+		2F6D7CD51E609B9C142F9085 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-045-A2.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-045-A2.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		34671E982D62C1CBCFBB4C22 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_events.mm";
 			path = "../../JuceLibraryCode/include_juce_events.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		36A1A15292DB5E5F9C176DD2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-057-A3.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-057-A3.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		36C36295D69A9CB55A030F83 = {
@@ -377,6 +579,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = AppConfig.h;
 			path = ../../Source/AppConfig.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		394230AA7C8C0AF0F26E7E04 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-096-C7.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-096-C7.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		396068B3031251F1E934AF3F = {
@@ -407,6 +616,20 @@
 			path = ../../Source/Help.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		3D45EFB26E94484E5B2E0078 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_SFZero.cpp";
+			path = "../../JuceLibraryCode/include_SFZero.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		475263AA43276609338D4A8A = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-099-D#7.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-099-D#7.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		48E4F0E92E3A2ECAD9A3DE2D = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -421,6 +644,13 @@
 			path = System/Library/Frameworks/CoreAudioKit.framework;
 			sourceTree = SDKROOT;
 		};
+		4B2243F3C9F60DCCD4355B0D = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-093-A6.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-093-A6.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		4B5E8EC9F752800AE7BC3FAD = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -433,6 +663,13 @@
 			lastKnownFileType = file;
 			name = "juce_audio_devices";
 			path = "../../../juce/modules/juce_audio_devices";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4C6A62438F3A1024F58E2AB2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-108-C8.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-108-C8.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		4ECB967DA3B220D86B98636B = {
@@ -461,6 +698,13 @@
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_data_structures.mm";
 			path = "../../JuceLibraryCode/include_juce_data_structures.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		547FA5018253198533FBE5D3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-066-F#4.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-066-F#4.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		54C55E00659B8519890A318B = {
@@ -533,6 +777,13 @@
 			path = Grace.entitlements;
 			sourceTree = "SOURCE_ROOT";
 		};
+		66D596B07674272D0FCDF72D = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-078-F#5.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-078-F#5.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		6965EEF25FCA4B49F4259322 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -568,6 +819,13 @@
 			path = ../../Source/SchemeSources.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		75EA50C228A01793AD42498F = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-036-C2.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-036-C2.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		76E00F04C5A9DB5DB9529C76 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -587,6 +845,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = JuceHeader.h;
 			path = ../../JuceLibraryCode/JuceHeader.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		79D8E970220EF840EE8EFD36 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-030-F#1.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-030-F#1.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		7ADC233D7413A7F1523D6BAB = {
@@ -610,6 +875,13 @@
 			path = ../../Source/AudioFilePlayer.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		7C730E133FD3A37A2E1E94FD = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-048-C3.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-048-C3.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		7F2F01A0335B1418571FD35B = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -631,6 +903,20 @@
 			path = ../../Source/Syntax.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		83B28AA4E0852D9E13C219E0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-054-F#3.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-054-F#3.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
+		89A0603EB1B36AF2F901B6F7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-060-C4.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-060-C4.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		8A9747BFCFDB8440497B796A = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -638,11 +924,32 @@
 			path = "../../JuceLibraryCode/include_juce_osc.cpp";
 			sourceTree = "SOURCE_ROOT";
 		};
+		8DB8FD165EE6FAF9BB4927CC = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-063-D#4.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-063-D#4.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
+		9180C63FB94A82DA04E8E719 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = SFZeroAudioProcessor.h;
+			path = ../../../harmonia3/Sources/SFZeroAudioProcessor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		918C4FD2F83BB4F57118C0F1 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
 			name = PlotEditor.h;
 			path = ../../Source/PlotEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		94EE84263380CF2D2E63DEBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-042-F#2.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-042-F#2.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		958104C11835A115837F3F14 = {
@@ -666,11 +973,25 @@
 			path = System/Library/Frameworks/Cocoa.framework;
 			sourceTree = SDKROOT;
 		};
+		9D263DEF8F4CF1CD8EF61E66 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-024-C1.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-024-C1.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		9D981B27156F7309D4A52198 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = OpenSoundControl.cpp;
 			path = ../../Source/OpenSoundControl.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		9E6A00B6F476475F2864FB4F = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-069-A4.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-069-A4.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		9ED58C8F6D3855412BDF31A7 = {
@@ -764,6 +1085,13 @@
 			path = System/Library/Frameworks/Accelerate.framework;
 			sourceTree = SDKROOT;
 		};
+		B6B4D12AAEA978FB1E3F2A7C = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-084-C6.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-084-C6.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		B7CAEEA38F961D729C79550D = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -792,6 +1120,20 @@
 			path = ../../Source/Csound.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		C00C93A271ABEE930ED86F07 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-072-C5.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-072-C5.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C24B1008BA31C9CD7F08C56F = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-033-A1.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-033-A1.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		C3018C9D242CDDA2CA02CDE8 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -818,6 +1160,13 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = Instruments.cpp;
 			path = ../../Source/Instruments.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CA54104D57F518CA8B627514 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = SFZeroAudioProcessor.cpp;
+			path = ../../../harmonia3/Sources/SFZeroAudioProcessor.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		CAC19913BC14722E5D24A090 = {
@@ -876,6 +1225,13 @@
 			path = ../../Source/Metronome.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		E70D9E32A76488B304863977 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-087-D#6.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-087-D#6.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		ED1ECFEE478CE920E729B2D7 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -911,11 +1267,25 @@
 			path = "../../../juce/modules/juce_audio_utils";
 			sourceTree = "SOURCE_ROOT";
 		};
+		F19EE070535769FBEE5C7D36 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-027-D#1.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-027-D#1.wav";
+			sourceTree = "SOURCE_ROOT";
+		};
 		F58B9F8980F312063A64A82F = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
 			name = "juce_data_structures";
 			path = "../../../juce/modules/juce_data_structures";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F5E6DFB8EF68F435DF4042D7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.sfz;
+			name = "G800-A112-Piano1d-2-3f.sfz";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/G800-A112-Piano1d-2-3f.sfz";
 			sourceTree = "SOURCE_ROOT";
 		};
 		F7218D4723F8F73536CD7BC3 = {
@@ -930,6 +1300,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = Syntax.h;
 			path = ../../Source/Syntax.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F9FAEA1AE7DEEAD5CB83CB96 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = "3f-039-D#2.wav";
+			path = "../../Resources/SoundFonts/A112-Piano1d-2/3f-039-D#2.wav";
 			sourceTree = "SOURCE_ROOT";
 		};
 		FBE85EFE59AFE51E98A517ED = {
@@ -1030,6 +1407,8 @@
 				B8DC51B96DBE6A7E32250BEA,
 				6FF5284179ED36CCCFB637AA,
 				032FA71557F68A778B8C899B,
+				CA54104D57F518CA8B627514,
+				9180C63FB94A82DA04E8E719,
 				11CDDD31FA602B2DE5973FF0,
 				D9EB7196BEB0077F577BD58C,
 				4ECEF1E064DDEE225D7A682D,
@@ -1066,6 +1445,7 @@
 				ABD739C58DF26D28C49A2C5C,
 				A1FD2BF522AC9E031E598501,
 				C3018C9D242CDDA2CA02CDE8,
+				152572F78B80E34B3323B86A,
 			);
 			name = "JUCE Modules";
 			sourceTree = "<group>";
@@ -1088,6 +1468,7 @@
 				7ADC233D7413A7F1523D6BAB,
 				B7E148B584F3D634F7B6050E,
 				8A9747BFCFDB8440497B796A,
+				3D45EFB26E94484E5B2E0078,
 				79B7431F2208152E1C63C3EC,
 			);
 			name = "JUCE Library Code";
@@ -1099,6 +1480,37 @@
 				D9C10C6AB1A2AEC96B246D3E,
 				656871EB8E9995AE3C3EC52F,
 				0A901C25CF52A46DCC7B832A,
+				0E68FE546117A8DCC33F9E48,
+				9D263DEF8F4CF1CD8EF61E66,
+				F19EE070535769FBEE5C7D36,
+				79D8E970220EF840EE8EFD36,
+				C24B1008BA31C9CD7F08C56F,
+				75EA50C228A01793AD42498F,
+				F9FAEA1AE7DEEAD5CB83CB96,
+				94EE84263380CF2D2E63DEBA,
+				2F6D7CD51E609B9C142F9085,
+				7C730E133FD3A37A2E1E94FD,
+				2AC60D3A7032035EAB56628C,
+				83B28AA4E0852D9E13C219E0,
+				36A1A15292DB5E5F9C176DD2,
+				89A0603EB1B36AF2F901B6F7,
+				8DB8FD165EE6FAF9BB4927CC,
+				547FA5018253198533FBE5D3,
+				9E6A00B6F476475F2864FB4F,
+				C00C93A271ABEE930ED86F07,
+				12615D0C0527E2C05BE062FD,
+				66D596B07674272D0FCDF72D,
+				24C5DC157B4A23595E9E7639,
+				B6B4D12AAEA978FB1E3F2A7C,
+				E70D9E32A76488B304863977,
+				0A916D86B268A291BD8441AF,
+				4B2243F3C9F60DCCD4355B0D,
+				394230AA7C8C0AF0F26E7E04,
+				475263AA43276609338D4A8A,
+				2752AF4D76E62706A6D5BE78,
+				1FE0826A0AF8CC2B1B1A6050,
+				4C6A62438F3A1024F58E2AB2,
+				F5E6DFB8EF68F435DF4042D7,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1175,6 +1587,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../JuceLibraryCode",
 					"../../../juce/modules",
+					"../../Source",
 					"../../../sndlib",
 					"$(inherited)",
 				);
@@ -1222,6 +1635,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../JuceLibraryCode",
 					"../../../juce/modules",
+					"../../Source",
 					"../../../sndlib",
 					"$(inherited)",
 				);
@@ -1357,6 +1771,37 @@
 			files = (
 				3E81E6DE0CB45535F12C2F14,
 				955AEBEB13F4FAB672EAF9AC,
+				912F8402045DCA08C9DEA110,
+				2997CDDD18B93856427C3810,
+				67FB465EC0EDB42E8DCDE7B5,
+				0665AB7155817EDEBC401A3A,
+				D0A9DDCE779D0D62D24A9600,
+				81874551ABA06192CFA7FABD,
+				3A260968179B3FDA0A79EFDB,
+				5C04892BFABD15381ED06BC2,
+				9C2E323A3CB5FF7A12812A4B,
+				7980680BEFD246919B74D755,
+				960A26398AE95F45828E6016,
+				47FF594F55CF3EA04B5696D1,
+				7B6B68211AC46D3C7CD734C1,
+				011827DFD27841D3DCFE9838,
+				9DBD4546157CE3BB8A21580C,
+				F5D004322F646DD50B734C0A,
+				B97008F7C46CB4EE1B7125D2,
+				7D59DBF36C19B396DBCD79CC,
+				E7222DB51BC9F5A4F4DADCA6,
+				1538BE4A417C20C2C89224BC,
+				BA25D97FC964524B932E43EC,
+				F9A0EAEE437ACEFA0FAFDF4A,
+				42682A5C785056AD1B945F86,
+				CDD02C536FEC0B2DB251CC65,
+				FECC062870C1B85545F6D44E,
+				D8C7CCF229E50DF3E07DC8AB,
+				5BE6832394BE341ACFA3C581,
+				9946288FF27CE583DFE7FF4B,
+				D88D57C20B44F09EEC309583,
+				19BA377842A58878A643F1DB,
+				364599C66585CE73DA47EBA2,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1388,6 +1833,7 @@
 				9146640250FE36A623E54EF7,
 				F68C24A54B198A0192F64365,
 				9CC1DED7B983843D9566DB1D,
+				C54B2E32910ADB2013BAF470,
 				6C8116CF035AC8A3921966E1,
 				0898FB882B613848EA75AFF5,
 				F6565693D99F135F85448DB9,
@@ -1404,6 +1850,7 @@
 				FE2ACB7AE7146F93FD9D8668,
 				EF05833AA295344F780E3231,
 				945C77A80025B4D1FE708EEB,
+				45ABA17FDE9BFA4119B44567,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

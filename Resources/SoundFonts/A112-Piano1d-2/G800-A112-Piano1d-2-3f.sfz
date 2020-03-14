@@ -1,0 +1,82 @@
+// Auteur : ElectroKarma
+// License : libre de droit
+// Date : 12/02/2018
+// Sampling : 48 KHz / 24 bits
+// Canaux : Stéréo
+// Plage : A0(21) -> C8(108), par pas de 3 1/2 tons (nbre d'échantillons : 30)
+// TVF Reso = -64 (mellow)
+// 3f : TVF Freq = +8
+
+<group> 
+	loop_mode=no_loop 
+	pan=0 
+	volume=0 
+	lochan=1 
+	hichan=16 
+	ampeg_release=1 
+	bend_up=100 
+	bend_down=-100 
+	bend_step=1 
+	pitchlfo_depthcc1=0
+	pitchlfo_freq=0
+// 21-A0
+<region> pitch_keycenter=21 tune=0 lokey=0 hikey=23 lovel=0 hivel=127 sample=3f-021-A0.wav
+// 24-C1
+<region> pitch_keycenter=24 tune=0 lokey=24 hikey=26 lovel=0 hivel=127 sample=3f-024-C1.wav
+// 27-D#1
+<region> pitch_keycenter=27 tune=0 lokey=27 hikey=29 lovel=0 hivel=127 sample=3f-027-D#1.wav
+// 30-F#1
+<region> pitch_keycenter=30 tune=0 lokey=30 hikey=32 lovel=0 hivel=127 sample=3f-030-F#1.wav
+// 33-A1
+<region> pitch_keycenter=33 tune=0 lokey=33 hikey=35 lovel=0 hivel=127 sample=3f-033-A1.wav
+// 36-C2
+<region> pitch_keycenter=36 tune=0 lokey=36 hikey=38 lovel=0 hivel=127 sample=3f-036-C2.wav
+// 39-D#2
+<region> pitch_keycenter=39 tune=0 lokey=39 hikey=41 lovel=0 hivel=127 sample=3f-039-D#2.wav
+// 42-F#2
+<region> pitch_keycenter=42 tune=0 lokey=42 hikey=44 lovel=0 hivel=127 sample=3f-042-F#2.wav
+// 45-A2
+<region> pitch_keycenter=45 tune=0 lokey=45 hikey=47 lovel=0 hivel=127 sample=3f-045-A2.wav
+// 48-C3
+<region> pitch_keycenter=48 tune=0 lokey=48 hikey=50 lovel=0 hivel=127 sample=3f-048-C3.wav
+// 51-D#3
+<region> pitch_keycenter=51 tune=0 lokey=51 hikey=53 lovel=0 hivel=127 sample=3f-051-D#3.wav
+// 54-F#3
+<region> pitch_keycenter=54 tune=0 lokey=54 hikey=56 lovel=0 hivel=127 sample=3f-054-F#3.wav
+// 57-A3
+<region> pitch_keycenter=57 tune=0 lokey=57 hikey=59 lovel=0 hivel=127 sample=3f-057-A3.wav
+// 60-C4
+<region> pitch_keycenter=60 tune=0 lokey=60 hikey=62 lovel=0 hivel=127 sample=3f-060-C4.wav
+// 63-D#4
+<region> pitch_keycenter=63 tune=0 lokey=63 hikey=65 lovel=0 hivel=127 sample=3f-063-D#4.wav
+// 66-F#4
+<region> pitch_keycenter=66 tune=0 lokey=66 hikey=68 lovel=0 hivel=127 sample=3f-066-F#4.wav
+// 69-A4
+<region> pitch_keycenter=69 tune=0 lokey=69 hikey=71 lovel=0 hivel=127 sample=3f-069-A4.wav
+// 72-C5
+<region> pitch_keycenter=72 tune=0 lokey=72 hikey=74 lovel=0 hivel=127 sample=3f-072-C5.wav
+// 75-D#5
+<region> pitch_keycenter=75 tune=0 lokey=75 hikey=77 lovel=0 hivel=127 sample=3f-075-D#5.wav
+// 78-F#5
+<region> pitch_keycenter=78 tune=0 lokey=78 hikey=80 lovel=0 hivel=127 sample=3f-078-F#5.wav
+// 81-A5
+<region> pitch_keycenter=81 tune=0 lokey=81 hikey=83 lovel=0 hivel=127 sample=3f-081-A5.wav
+// 84-C6
+<region> pitch_keycenter=84 tune=0 lokey=84 hikey=86 lovel=0 hivel=127 sample=3f-084-C6.wav
+// 87-D#6
+<region> pitch_keycenter=87 tune=0 lokey=87 hikey=89 lovel=0 hivel=127 sample=3f-087-D#6.wav
+// 90-F#6
+<region> pitch_keycenter=90 tune=0 lokey=90 hikey=92 lovel=0 hivel=127 sample=3f-090-F#6.wav
+// 93-A6
+<region> pitch_keycenter=93 tune=0 lokey=93 hikey=95 lovel=0 hivel=127 sample=3f-093-A6.wav
+// 96-C7
+<region> pitch_keycenter=96 tune=0 lokey=96 hikey=98 lovel=0 hivel=127 sample=3f-096-C7.wav
+// 99-D#7
+<region> pitch_keycenter=99 tune=0 lokey=99 hikey=101 lovel=0 hivel=127 sample=3f-099-D#7.wav
+// 102-F#7
+<region> pitch_keycenter=102 tune=0 lokey=102 hikey=104 lovel=0 hivel=127 sample=3f-102-F#7.wav
+// 105-A7
+<region> pitch_keycenter=105 tune=0 lokey=105 hikey=107 lovel=0 hivel=127 sample=3f-105-A7.wav
+// 108-C8
+<region> pitch_keycenter=108 tune=0 lokey=108 hikey=127 lovel=0 hivel=127 sample=3f-108-C8.wav
+

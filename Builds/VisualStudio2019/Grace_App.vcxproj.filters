@@ -389,6 +389,15 @@
     <Filter Include="JUCE Modules\juce_osc">
       <UniqueIdentifier>{B1DE8DB1-C00A-12C0-D690-8B3C9504A60A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JUCE Modules\SFZero\sfzero\sf2-chunks">
+      <UniqueIdentifier>{8EB86675-8D09-39A3-AC44-CEAD76018ACD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\SFZero\sfzero">
+      <UniqueIdentifier>{8667D8F8-2AE7-37EB-8F3D-56742B69AC2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\SFZero">
+      <UniqueIdentifier>{EA118D79-9634-3DF8-43BE-44D428F85784}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JUCE Modules">
       <UniqueIdentifier>{FE955B6B-68AC-AA07-70D8-2413F6DB65C8}</UniqueIdentifier>
     </Filter>
@@ -467,6 +476,9 @@
       <Filter>Grace\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SchemeSources.cpp">
+      <Filter>Grace\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\harmonia3\Sources\SFZeroAudioProcessor.cpp">
       <Filter>Grace\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SndLibLoad.cpp">
@@ -2317,6 +2329,48 @@
     <ClCompile Include="..\..\..\juce\modules\juce_osc\juce_osc.cpp">
       <Filter>JUCE Modules\juce_osc</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\RIFF.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SF2.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SF2Generator.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SF2Reader.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SF2Sound.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZDebug.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZEG.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZReader.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZRegion.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZSample.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZSound.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZSynth.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\sfzero\SFZVoice.cpp">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SFZero\SFZero.cpp">
+      <Filter>JUCE Modules\SFZero</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
@@ -2354,6 +2408,9 @@
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_osc.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\include_SFZero.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
   </ItemGroup>
@@ -2440,6 +2497,9 @@
       <Filter>Grace\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SchemeSources.h">
+      <Filter>Grace\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\harmonia3\Sources\SFZeroAudioProcessor.h">
       <Filter>Grace\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Skin.h">
@@ -4452,6 +4512,87 @@
     <ClInclude Include="..\..\..\juce\modules\juce_osc\juce_osc.h">
       <Filter>JUCE Modules\juce_osc</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\generators.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\ibag.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\igen.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\imod.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\inst.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\iver.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\pbag.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\pgen.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\phdr.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\pmod.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\sf2-chunks\shdr.h">
+      <Filter>JUCE Modules\SFZero\sfzero\sf2-chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\RIFF.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SF2.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SF2Generator.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SF2Reader.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SF2Sound.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SF2WinTypes.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZCommon.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZDebug.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZEG.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZReader.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZRegion.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZSample.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZSound.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZSynth.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\sfzero\SFZVoice.h">
+      <Filter>JUCE Modules\SFZero\sfzero</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SFZero\SFZero.h">
+      <Filter>JUCE Modules\SFZero</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
@@ -4504,6 +4645,9 @@
     </None>
     <None Include="..\..\..\juce\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt">
       <Filter>JUCE Modules\juce_graphics\image_formats\pnglib</Filter>
+    </None>
+    <None Include="..\..\Source\SFZero\README.md">
+      <Filter>JUCE Modules\SFZero</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
