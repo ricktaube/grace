@@ -38,16 +38,7 @@ AudioFilePlayer::AudioFilePlayer()
   audioInfo->setComponentID("AudioInfo");
   transport->setSize(transport->getWidth(), transport->getHeight() + 28);
   audioInfo->setBounds((transport->getWidth() - 18) / 2,
-                       transport->getBottom() - 28, 140, 18);
-  /*  juce::ComboBox* audioInfo = new juce::ComboBox("AudioInfo");
-  transport->addAndMakeVisible(audioInfo);
-  audioInfo->setEditableText(false);
-  audioInfo->setComponentID("AudioInfo");
-  audioInfo->setTextWhenNothingSelected("Audio Properties...");
-  transport->setSize(transport->getWidth(), transport->getHeight() + 28);
-  audioInfo->setBounds((transport->getWidth() - 140) / 2,
-                       transport->getBottom() - 28, 140, 18);
-  */                                
+                       transport->getBottom() - 28, 140, 18);                             
   setSize(transport->getWidth(), transport->getHeight());
   setContentOwned(transport, false);
   // timer init

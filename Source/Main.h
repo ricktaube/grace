@@ -63,6 +63,7 @@ public:
   }
 
   // these are implemented in Command.cpp
+  const juce::File getRuntimeResourceDirectory();
   void setActiveWindow(juce::TopLevelWindow* window);
   void refreshMenuBar();
   juce::ApplicationCommandManager commandManager;

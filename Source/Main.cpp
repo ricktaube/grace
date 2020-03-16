@@ -67,6 +67,23 @@ void Grace::anotherInstanceStarted(const juce::String& commandLine)
   }
 }
 
+const juce::File Grace::getRuntimeResourceDirectory() {
+#if JUCE_MAC
+  return juce::File::getSpecialLocation(juce::File::currentApplicationFile).getChildFile("Contents/Resources");
+#endif
+#if JUCE_WINDOWS
+  return File::getSpecialLocation(juce::File::currentApplicationFile).getParentDirectory().getChildFile("Resources");
+#endif
+#if JUCE_IOS
+  return File::getSpecialLocation(juce::File::currentApplicationFile);
+#endif
+#if JUCE_LINUX
+  return File::getSpecialLocation(juce::File::currentApplicationFile).getParentDirectory().getParentDirectory().getParentDirectory().getParentDirectory().getChildFile("Resources");
+#endif
+  // If you hit this assert you need to add the application's resource directory on your OS.
+  jassert(false);
+}
+
 void Grace::initialise(const juce::String& commandLine)
 {
   std::cout << "Starting Grace...\n";

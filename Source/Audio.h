@@ -23,23 +23,22 @@ class AudioManager
   /// The SFZero soundfont synth.
 //  std::unique_ptr<sfzero::SFZeroAudioProcessor> sfZeroAudioProcessor;
   sfzero::SFZeroAudioProcessor sfZeroAudioProcessor;
-//  /// An audio processor player to play the SFZeroAudioProcessor
-//  AudioProcessorPlayer sfZeroPlayer;
 
-  /// Internal synth graph (Mac).
-  juce::AudioProcessorGraph macDLSMusicDevice;
-  /// Internal synth player (Mac).
+  /// Internal synth player. This will point to SFZero, DSLMusicDevice (Mac only)
+  /// or nullptr if a MidiOutput port is open.
   juce::AudioProcessorPlayer synthPlayer;
-  juce::AudioPluginFormatManager pluginFormatManager;
+#if JUCE_MAC
+  /// Internal synth graph for the high-quality DSLMusicDevice (Mac only).
+  juce::AudioProcessorGraph macDLSMusicDevice;
+  juce::AudioPluginFormatManager macPluginFormatManager;
   /// Creates internal synth for MIDI playback (Mac).
-  bool loadMacDLSMusicDevice();
+  bool macLoadDLSMusicDevice();
   /// Creates internal synth for MIDI playback (Mac).
-  bool createMacDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> synth);
-  /// Deletes the internal synth's editor if it exists (Mac).
-  void deleteInternalSynthEditor();
-
+  bool macCreateDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> synth);
   /// Prints all known plugins to std::out
-  void listAllPlugins();
+  void macListAllPlugins();
+#endif // JUCE_MAC
+  
 public:
   juce::AudioDeviceManager audioDeviceManager;
   /// Internal synth instance (Mac)

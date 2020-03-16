@@ -17,6 +17,7 @@
 #include "Audio.h"
 #include "Console.h"
 #include "AudioFilePlayer.h"
+#include "Main.h"
 
 /*=======================================================================*
   Global Audio Manager
@@ -26,28 +27,29 @@ juce_ImplementSingleton(AudioManager)
 
 AudioManager::AudioManager() {
   audioDeviceManager.initialise(2, 2, 0, true);
-
-  #ifdef JUCE_MAC
-  loadMacDLSMusicDevice();
-  #endif
+#ifdef JUCE_MAC
+  macLoadDLSMusicDevice();
+#endif
   
-//  // Call the audio manager's addMidiInputCallback() method
-//  // to add this component as the callback.
-//  audioManager.addMidiInputCallback("", this);
-//  
-//  // Connect the synth player to the host's audio manager using its
-//  // addAudioCallback() method.
-// audioManager.addAudioCallback(&sfZeroPlayer);
-//  // Create a new sfzero::SFZeroAudioProcessor and assign it to
-//  // the sfZeroAudioProcessor unique_ptr.
-//  sfZeroAudioProcessor.reset(new sfzero::SFZeroAudioProcessor());
-//  // Add the sfZeroAudioProcessor to the sfzero player.
-//  sfZeroPlayer.setProcessor(sfZeroAudioProcessor.get());
-//  // Call loadSoundFont() to load the our sound font file "G800-A112-Piano1d-2-3f.sfz".
-//  // This is stored in the the app's resource directory. See: MainApplication::getRuntimeResourceDirectory()
-//  auto soundFont = MainApplication::getApp().getRuntimeResourceDirectory().getChildFile("G800-A112-Piano1d-2-3f.sfz");
-//  loadSoundFont(soundFont);
-
+  //  // Call the audio manager's addMidiInputCallback() method
+  //  // to add this component as the callback.
+  //  audioManager.addMidiInputCallback("", this);
+  //
+  //  // Connect the synth player to the host's audio manager using its
+  //  // addAudioCallback() method.
+  
+  //  // Create a new sfzero::SFZeroAudioProcessor and assign it to
+  //  // the sfZeroAudioProcessor unique_ptr.
+  //  sfZeroAudioProcessor.reset(new sfzero::SFZeroAudioProcessor());
+  //  // Add the sfZeroAudioProcessor to the sfzero player.
+  //  sfZeroPlayer.setProcessor(sfZeroAudioProcessor.get());
+  //  // Call loadSoundFont() to load the our sound font file "G800-A112-Piano1d-2-3f.sfz".
+  //  // This is stored in the the app's resource directory. See: MainApplication::getRuntimeResourceDirectory()
+  auto soundFont = Grace::getApp().getRuntimeResourceDirectory().getChildFile("G800-A112-Piano1d-2-3f.sfz");
+  std::cout << "soundfont " << (soundFont != juce::File() ? "EXISTS!\n" : "ERROR!\n") ;
+  std::cout << "***NAME = " << sfZeroAudioProcessor.getName() << "\n";
+  //  loadSoundFont(soundFont);
+  
 }
 
 AudioManager::~AudioManager()
@@ -56,12 +58,11 @@ AudioManager::~AudioManager()
   synthPlayer.getMidiMessageCollector().reset(1000);
   audioDeviceManager.removeAudioCallback(&synthPlayer);
   synthPlayer.setProcessor(0);
-//  audioManager.removeAudioCallback(&sfZeroPlayer);
-//  sfZeroPlayer.setProcessor(nullptr);
 }
 
-bool AudioManager::loadMacDLSMusicDevice() {
-  pluginFormatManager.addDefaultFormats();
+#if JUCE_MAC
+bool AudioManager::macLoadDLSMusicDevice() {
+  macPluginFormatManager.addDefaultFormats();
   juce::OwnedArray<juce::PluginDescription> buf;
   juce::PluginDescription des;
   // Create the DLSMusicDevice (see: 'auval -a')
@@ -69,18 +70,18 @@ bool AudioManager::loadMacDLSMusicDevice() {
   des.fileOrIdentifier = "AudioUnit:Synths/aumu,dls ,appl";
   auto lambda = [this] (std::unique_ptr<juce::AudioPluginInstance> synth, const juce::String&) {
     if (synth)
-      this->createMacDLSMusicDevice(std::move(synth));
+      macCreateDLSMusicDevice(std::move(synth));
     else
       std::cout << "*** Couldn't create internal synth :(\n";
     return false;
   };
-  pluginFormatManager.createPluginInstanceAsync(des, macDLSMusicDevice.getSampleRate(), macDLSMusicDevice.getBlockSize(), lambda);
+  macPluginFormatManager.createPluginInstanceAsync(des, macDLSMusicDevice.getSampleRate(), macDLSMusicDevice.getBlockSize(), lambda);
   audioDeviceManager.addAudioCallback(&synthPlayer);
   synthPlayer.setProcessor(&macDLSMusicDevice);
   return true;
 }
 
-bool AudioManager::createMacDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> internalSynth)
+bool AudioManager::macCreateDLSMusicDevice(std::unique_ptr<juce::AudioPluginInstance> internalSynth)
 {
   //std::cout << "*** IN INTERNALSYNTH\n";
   // These have to be hooked up first or the AudioOutput graph node
@@ -132,41 +133,11 @@ bool AudioManager::createMacDLSMusicDevice(std::unique_ptr<juce::AudioPluginInst
   return false;
 }
 
-bool AudioManager::sendMessageToPluginGraph(const juce::MidiMessage &message)
-{
-  // stop a juce assertion about time stamp 0 with midi
-  // collectors. 
-  if (message.getTimeStamp() == 0.0)
-  {
-    juce::MidiMessage fixed = juce::MidiMessage(message, juce::Time::getMillisecondCounterHiRes() * .001);
-    synthPlayer.getMidiMessageCollector().addMessageToQueue(fixed);
-  }
-  else
-    synthPlayer.getMidiMessageCollector().addMessageToQueue(message);
-  return true;
-}
-
-void AudioManager::openAudioSettings()
-{
-  // Open an AudioDeviceSelectorComponent but without midi selections
-  // (these are handled by the Midi Manger)
-  juce::AudioDeviceSelectorComponent* comp
-    = new juce::AudioDeviceSelectorComponent(audioDeviceManager, 0, 256, 0, 256, false, false, true, false);
-  comp->setSize(500, 600);
-  juce::DialogWindow::LaunchOptions dw;
-  dw.useNativeTitleBar = true;
-  dw.resizable = true;
-  dw.dialogTitle = "Audio Settings";
-  dw.dialogBackgroundColour = ColorThemeIDs::getWindowBackgroundColor();
-  dw.content.setOwned(comp);
-  dw.runModal();
-}
-
 // DEBUGGING
-void AudioManager::listAllPlugins()
+void AudioManager::macListAllPlugins()
 {
   juce::KnownPluginList plugins;
-  juce::AudioPluginFormatManager* formats = &pluginFormatManager;
+  juce::AudioPluginFormatManager* formats = &macPluginFormatManager;
   
   std::cout << "Audio Plugin Formats:\n";
   for(int i = 0; i < formats->getNumFormats(); i++)
@@ -197,6 +168,38 @@ void AudioManager::listAllPlugins()
     std::cout << desc.name << " " << desc.fileOrIdentifier << "\n";
   }
 }
+#endif // JUCE_MAC
+
+bool AudioManager::sendMessageToPluginGraph(const juce::MidiMessage &message)
+{
+  // stop a juce assertion about time stamp 0 with midi
+  // collectors. 
+  if (message.getTimeStamp() == 0.0)
+  {
+    juce::MidiMessage fixed = juce::MidiMessage(message, juce::Time::getMillisecondCounterHiRes() * .001);
+    synthPlayer.getMidiMessageCollector().addMessageToQueue(fixed);
+  }
+  else
+    synthPlayer.getMidiMessageCollector().addMessageToQueue(message);
+  return true;
+}
+
+void AudioManager::openAudioSettings()
+{
+  // Open an AudioDeviceSelectorComponent but without midi selections
+  // (these are handled by the Midi Manger)
+  juce::AudioDeviceSelectorComponent* comp
+    = new juce::AudioDeviceSelectorComponent(audioDeviceManager, 0, 256, 0, 256, false, false, true, false);
+  comp->setSize(500, 600);
+  juce::DialogWindow::LaunchOptions dw;
+  dw.useNativeTitleBar = true;
+  dw.resizable = true;
+  dw.dialogTitle = "Audio Settings";
+  dw.dialogBackgroundColour = ColorThemeIDs::getWindowBackgroundColor();
+  dw.content.setOwned(comp);
+  dw.runModal();
+}
+
 
 void AudioManager::stopAudioPlayback()
 {
