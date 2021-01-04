@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" jucerVersion="5.4.7"
-              version="3.10.3" headerPath="../../../sndlib" defines="HAVE_SCHEME=1">
+<JUCERPROJECT id="DhkLaj" name="Grace" projectType="guiapp" version="3.10.3"
+              headerPath="../../../sndlib" defines="HAVE_SCHEME=1" jucerFormatVersion="1">
   <MAINGROUP id="uY8Jva" name="Grace">
     <GROUP id="{821C7801-B231-6F50-D189-87D7073B543D}" name="Icons">
       <FILE id="GlOMaa" name="Grace.icns" compile="0" resource="1" file="Resources/Icons/Grace.icns"
@@ -91,7 +91,7 @@
         <CONFIGURATION isDebug="0" name="Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="../juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../juce6/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../juce/modules"/>
         <MODULEPATH id="juce_audio_processors" path="../juce/modules"/>
@@ -150,18 +150,18 @@
     </LINUX_MAKE>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
   <LIVE_SETTINGS>
     <OSX/>
